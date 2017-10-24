@@ -1,7 +1,6 @@
 Village Hardware 
 ===============================
 
-A demo project for the group. 
 
 Documentation is at [docs/guide/README.md](docs/guide/README.md).
 
