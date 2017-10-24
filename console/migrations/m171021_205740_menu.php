@@ -16,6 +16,7 @@ class m171021_205740_menu extends Migration
           'menu_id' => $this->primaryKey(),
           'menu_name' => $this->string(32)->notNull(),
           'menu_submenu_true' => $this->smallInteger()->notNull(),
+          'menu_order' => $this->smallInteger()->notNull(),
       ], $tableOptions);
     }
 
