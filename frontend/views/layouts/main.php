@@ -29,11 +29,12 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'Village Green Hardware  313*222*2214',
+        'brandLabel' => 'Village Hardware  313*222*2214',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
+
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
@@ -59,6 +60,9 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
+
+
+    
 
     <div class="container">
         <?= Breadcrumbs::widget([
