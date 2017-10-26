@@ -64,12 +64,22 @@ AppAsset::register($this);
             
         ],
         [
-            'label' => 'Dropdown',
+            'label' => 'Hardware',
             'items' => [
-                 ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
+                 ['label' => 'Hardware', 'url' => '#'],
                  '<li class="divider"></li>',
-                 '<li class="dropdown-header">Dropdown Header</li>',
-                 ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
+                 '<li class="dropdown-header">Departments</li>',
+                 ['label' => 'Tools', 'url' => '#'],
+            ],
+        ],
+
+         [
+            'label' => 'HomeGoods',
+            'items' => [
+                 ['label' => 'HomeGoods', 'url' => '#'],
+                 '<li class="divider"></li>',
+                 '<li class="dropdown-header">Departments</li>',
+                 ['label' => 'Lamps', 'url' => '#'],
             ],
         ],
         [
@@ -82,9 +92,7 @@ AppAsset::register($this);
 ]);
     NavBar::end();
     ?>
-
-
-    
+   
 
     <div class="container">
         <?= Breadcrumbs::widget([
