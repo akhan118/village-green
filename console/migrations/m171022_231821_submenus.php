@@ -36,9 +36,7 @@ class m171022_231821_submenus extends Migration
 
     public function down()
     {
-        echo "m171022_231821_submenus cannot be reverted.\n";
-
-        return false;
+      $this->dropTable('submenus');
     }
 
     /*
