@@ -22,9 +22,7 @@ class m171021_205740_menu extends Migration
 
     public function down()
     {
-        echo "m171021_205740_menu cannot be reverted.\n";
-
-        return false;
+        $this->dropTable('menu');
     }
 
     /*
