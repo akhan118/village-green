@@ -83,4 +83,17 @@ class AppController extends Controller
     }
 
 
+
+        /**
+         * Displays menu.
+         *
+         * @return mixed
+         */
+        public function actionMenu()
+        {
+            return $this->render('menu');
+
+        }
+
+
 }
