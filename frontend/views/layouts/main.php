@@ -54,11 +54,82 @@ AppAsset::register($this);
             . Html::endForm()
             . '</li>';
     }
+
+    // Drop down menu
+    $menuItems[] = [
+      'label' => 'test',
+      'items' => [
+       ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
+       '<li class="divider"></li>',
+       '<li class="dropdown-header">Dropdown Header</li>',
+       ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
+        ],
+
+     ];
+     // Drop down menu 
+
+
+
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,
     ]);
     NavBar::end();
+
+
+//
+//     NavBar::begin([
+// ‘brandLabel’ => Yii::t(‘frontend’,’MeetingPlanner.io’), //
+// ‘brandUrl’ => Yii::$app->homeUrl,
+// ‘options’ => [
+// ‘class’ => ‘navbar-inverse navbar-fixed-top’,
+// ],
+// ]);
+// if (Yii::$app->user->isGuest) {
+// $menuItems[] = [‘label’ => Yii::t(‘frontend’,’Signup’), ‘url’ => [‘/site/signup’]];
+// $menuItems[] = [‘label’ => Yii::t(‘frontend’,’Login’), ‘url’ => [‘/site/login’]];
+// } else {
+// $menuItems = [
+// [‘label’ => Yii::t(‘frontend’,’Meetings’), ‘url’ => [‘/meeting’]],
+// [‘label’ => Yii::t(‘frontend’,’Places’), ‘url’ => [‘/place/yours’]],
+// ];
+// }
+// $menuItems[]=[‘label’ => Yii::t(‘frontend’,’About’),
+// ‘items’ => [
+// [‘label’ => Yii::t(‘frontend’,’Learn more’), ‘url’ => [‘/site/about’]],
+// [‘label’ => Yii::t(‘frontend’,’Contact us’), ‘url’ => [‘/site/contact’]],
+// ],
+// ];
+// if (!Yii::$app->user->isGuest) {
+// $menuItems[] = [
+// ‘label’ => ‘Account’,
+// ‘items’ => [
+// [
+// ‘label’ => Yii::t(‘frontend’,’Friends’),
+// ‘url’ => [‘/friend’],
+// ],
+// [
+// ‘label’ => Yii::t(‘frontend’,’Contact information’),
+// ‘url’ => [‘/user-contact’],
+// ],
+// [
+// ‘label’ => Yii::t(‘frontend’,’Settings’),
+// ‘url’ => [‘/user-setting’],
+// ],
+// [
+// ‘label’ => Yii::t(‘frontend’,’Logout’).’ (‘ . Yii::$app->user->identity->username . ‘)’,
+// ‘url’ => [‘/site/logout’],
+// ‘linkOptions’ => [‘data-method’ => ‘post’]
+// ],
+// ],
+// ];
+// }
+// echo Nav::widget([
+// ‘options’ => [‘class’ => ‘navbar-nav navbar-right’],
+// ‘items’ => $menuItems,
+// ]);
+// NavBar::end();
+
     ?>
 
     <div class="container">
