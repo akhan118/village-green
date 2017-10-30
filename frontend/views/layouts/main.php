@@ -1,15 +1,12 @@
 <?php
-
 /* @var $this \yii\web\View */
 /* @var $content string */
-
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
-
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -29,15 +26,12 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'Village Hardware  313*222*2214',
+        'brandLabel' => 'Village Green Hardware  313*222*2214',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
-
     ]);
-
-
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'About', 'url' => ['/site/about']],
@@ -57,7 +51,6 @@ AppAsset::register($this);
             . Html::endForm()
             . '</li>';
     }
-
     // Drop down menu
     $menuItems[] = [
       'label' => 'test',
@@ -67,47 +60,14 @@ AppAsset::register($this);
        '<li class="dropdown-header">Dropdown Header</li>',
        ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
         ],
-
      ];
      // Drop down menu
-
     echo Nav::widget([
-    'items' => [
-        [
-            'label' => 'Home',
-            'url' => ['site/index'],
-            
-        ],
-        [
-            'label' => 'Hardware',
-            'items' => [
-                 ['label' => 'Hardware', 'url' => '#'],
-                 '<li class="divider"></li>',
-                 '<li class="dropdown-header">Departments</li>',
-                 ['label' => 'Tools', 'url' => '#'],
-            ],
-        ],
-
-         [
-            'label' => 'HomeGoods',
-            'items' => [
-                 ['label' => 'HomeGoods', 'url' => '#'],
-                 '<li class="divider"></li>',
-                 '<li class="dropdown-header">Departments</li>',
-                 ['label' => 'Lamps', 'url' => '#'],
-            ],
-        ],
-        [
-            'label' => 'Login',
-            'url' => ['site/login'],
-            'visible' => Yii::$app->user->isGuest
-        ],
-    ],
-    'options' => ['class' =>'nav-pills'], // set this to nav-tab to get tab-styled navigation
-]);
+        'options' => ['class' => 'navbar-nav navbar-right'],
+        'items' => $menuItems,
+    ]);
     NavBar::end();
     ?>
-   
 
     <div class="container">
         <?= Breadcrumbs::widget([
