@@ -54,6 +54,20 @@ AppAsset::register($this);
             . Html::endForm()
             . '</li>';
     }
+
+    // Drop down menu
+    $menuItems[] = [
+      'label' => 'test',
+      'items' => [
+       ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
+       '<li class="divider"></li>',
+       '<li class="dropdown-header">Dropdown Header</li>',
+       ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
+        ],
+
+     ];
+     // Drop down menu
+
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,

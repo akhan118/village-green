@@ -37,7 +37,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
             <div class="left_col scroll-view">
 
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
+                    <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>Sunny House Hardware</span></a>
                 </div>
                 <div class="clearfix"></div>
 
@@ -48,7 +48,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
-                        <h2>John Doe</h2>
+                        <h2>Sunny House</h2>
                     </div>
                 </div>
                 <!-- /menu prile quick info -->
@@ -66,7 +66,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                 "items" => [
                                     ["label" => "Home", "url" => "/", "icon" => "home"],
                                     ["label" => "Menus", "url" => ["app/menu"], "icon" => "files-o"],
-                                    ["label" => "Error page", "url" => ["site/error-page"], "icon" => "close"],
+                                    ["label" => "Submenu", "url" => ["app/submenu"], "icon" => "files-o"],
+                                    ["label" => "Pages", "url" => ["app/pages"], "icon" => "files-o"],
                                     [
                                         "label" => "Widgets",
                                         "icon" => "th",
@@ -292,8 +293,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
         <!-- footer content -->
         <footer>
             <div class="pull-right">
-                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com" rel="nofollow" target="_blank">Colorlib</a><br />
-                Extension for Yii framework 2 by <a href="http://yiister.ru" rel="nofollow" target="_blank">Yiister</a>
+                Code Crash Course <br />
+               <!--target="_blank">Yiister</a>  -->
             </div>
             <div class="clearfix"></div>
         </footer>

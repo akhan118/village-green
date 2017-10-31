@@ -8,7 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
-
+use app\model\menuentry;
 
 /**
  * Site controller
@@ -90,10 +90,33 @@ class AppController extends Controller
          * @return mixed
          */
         public function actionMenu()
+
         {
             return $this->render('menu');
 
         }
 
+        /**
+         * Displays Submenu.
+         *
+         * @return mixed
+         */
+        public function actionSubmenu()
+        {
+            return $this->render('submenu');
 
-}
+        }
+
+        /**
+         * Displays Pages.
+         *
+         * @return mixed
+         */
+        public function actionPages()
+        {
+            return $this->render('pages');
+
+        }
+
+
+       }
