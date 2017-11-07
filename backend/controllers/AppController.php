@@ -8,8 +8,9 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
-use app\model\menuentry;
-
+use backend\models\MenuForm;
+use backend\models\SubMenuForm;
+use backend\views\app\Submenu;
 /**
  * Site controller
  */
@@ -83,18 +84,30 @@ class AppController extends Controller
     }
 
 
+/**
+    * Displays menu.
+    *
+    * @return mixed
+    */
+   public function actionMenu()
 
-        /**
-         * Displays menu.
-         *
-         * @return mixed
-         */
-        public function actionMenu()
+   {
+            $model = new MenuForm;
+          if($model->load(Yii::$app->request->post()) && $model->validate())
+          {
+               var_dump($model);
+               echo "True SaveMenu";
 
-        {
-            return $this->render('menu');
+               if ($model->menu_submenu_true ==1){
+                 echo "Submenu is yes"  ;
+              return $this->render('submenu', ['model'=>$model,]);
+            }
 
+          }else {
+          return $this->render('menu', ['model'=>$model,]);
         }
+
+   }
 
         /**
          * Displays Submenu.
@@ -103,8 +116,14 @@ class AppController extends Controller
          */
         public function actionSubmenu()
         {
-            return $this->render('submenu');
+          $model = new SubMenuForm;
+          if($model->load(Yii::$app->request->post()) && $model->validate())
+          {
 
+          }else {
+          return $this->render('submenu', ['model'=>$model,]);
+
+}
         }
 
         /**
@@ -118,5 +137,13 @@ class AppController extends Controller
 
         }
 
+public function actionEntry()
+{
+$article= new MenuForm;
+$article->menu_name = "Home";
+$article->menu_submenu_true=1;
+$article->menu_order= '1';
+$article->insert();
+}
 
-       }
+}
