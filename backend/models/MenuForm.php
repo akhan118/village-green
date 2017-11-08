@@ -1,39 +1,18 @@
 <?php
 namespace backend\models;
-/**
- * This is the model class for table "products".
- *use yii\base\Model;
-* @property string $menu_name
-* @property integer $menu_submenu_true
-* @property string $$menu_order
-*
-* @property submenu[]
-*
-**/
-/**
- * menu
- */
-class MenuForm extends \yii\db\ActiveRecord
-{
-  /**
-   * @inheritdoc
-   */
-public static function tableName()
+use yii\base\Model;
+use backend\models\Menu;
+
+
+class MenuForm extends Model
 {
 
-  return 'menu';
-}
+
 
     public $menu_name;
     public $menu_submenu_true;
     public $menu_order;
-    public $submenu_name;
-    public $picture_path;
-    public $text_field;
 
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -48,13 +27,13 @@ public static function tableName()
     public function SaveMenu()
     {
         if ($this->validate()) {
-            $form=new Form();
+            $form=new Menu();
             $form->menu_name = $this->menu_name;
             $form->menu_submenu_true = $this->menu_submenu_true;
             $form->menu_order = $this->menu_order;
             $form->save();
 
-            echo "True SaveMenu";
+            var_dump("True SaveMenu");
             return true;
 
         }else{

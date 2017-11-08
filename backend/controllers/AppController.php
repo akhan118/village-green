@@ -95,13 +95,10 @@ class AppController extends Controller
             $model = new MenuForm;
           if($model->load(Yii::$app->request->post()) && $model->validate())
           {
-               var_dump($model);
-               echo "True SaveMenu";
+              // var_dump($model);
+               //echo "True SaveMenu";
+                $model->SaveMenu();
 
-               if ($model->menu_submenu_true ==1){
-                 echo "Submenu is yes"  ;
-              return $this->render('submenu', ['model'=>$model,]);
-            }
 
           }else {
           return $this->render('menu', ['model'=>$model,]);

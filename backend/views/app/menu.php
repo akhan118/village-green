@@ -59,10 +59,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <br>
 <br>
 
-<div class="form-group">
-      <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-primary' : 'btn btn-primary']) ?>
-</div>
 
+                <div class="form-group">
+                    <?= Html::submitButton('Create', ['class' => 'btn btn-primary', 'name' => 'create-button']) ?>
+                </div>
 
 
 
