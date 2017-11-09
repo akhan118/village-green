@@ -4,7 +4,7 @@ use yii\db\Migration;
 
 class m171022_231821_submenus extends Migration
 {
-    public function up()
+    public function safeUp()
     {
       $tableOptions = null;
       if ($this->db->driverName === 'mysql') {
@@ -15,18 +15,17 @@ class m171022_231821_submenus extends Migration
       $this->createTable('{{%submenus}}', [
           'submenu_id' => $this->primaryKey(),
           'submenu_name' => $this->string(32)->notNull(),
+          'menu_id' => $this->integer()->notNull(),
           'visible_or_invisible' => $this->smallInteger()->notNull(),
           'picture_path' => $this->string(32),
           'text_field' => $this->string(32)->notNull(),
-
-
       ], $tableOptions);
 
       // add foreign key for table `menu`
       $this->addForeignKey(
           'menu_submenu',
           'submenus',
-          'submenu_id',
+          'menu_id',
           'menu',
           'menu_id',
           'CASCADE'
@@ -34,11 +33,9 @@ class m171022_231821_submenus extends Migration
 
     }
 
-    public function down()
+    public function safeDown()
     {
-        echo "m171022_231821_submenus cannot be reverted.\n";
-
-        return false;
+      $this->dropTable('submenus');
     }
 
     /*
