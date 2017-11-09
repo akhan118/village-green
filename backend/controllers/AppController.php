@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
 use backend\models\MenuForm;
+use backend\models\PagesForm;
 use backend\models\SubMenuForm;
 use backend\views\app\Submenu;
 /**
@@ -130,7 +131,18 @@ class AppController extends Controller
          */
         public function actionPages()
         {
-            return $this->render('pages');
+
+          $model = new pagesForm;
+          if($model->load(Yii::$app->request->post()) && $model->validate())
+          {
+            //var_dump($model);
+            //echo "True SaveMenu";
+            $model->SavePages();
+
+          }else {
+          return $this->render('pages', ['model'=>$model,]);
+
+          }
 
         }
 
