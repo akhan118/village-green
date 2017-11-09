@@ -4,7 +4,7 @@ use yii\db\Migration;
 
 class m171021_205740_menu extends Migration
 {
-    public function up()
+    public function safeup()
     {
       $tableOptions = null;
       if ($this->db->driverName === 'mysql') {
@@ -20,7 +20,7 @@ class m171021_205740_menu extends Migration
       ], $tableOptions);
     }
 
-    public function down()
+    public function safedown()
     {
         $this->dropTable('menu');
     }
