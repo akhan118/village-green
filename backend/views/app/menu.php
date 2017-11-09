@@ -6,6 +6,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\Modal;
 use yii\bootstrap\ActiveForm;
+use dosamigos\ckeditor\CKEditor;
 
 
 
@@ -29,7 +30,11 @@ $this->params['breadcrumbs'][] = $this->title;
         <!--Selection BAR -->
         <div class="col-md-7">
 
-               <?= $form->field($model,'menu_name') -> textInput(['maxlength'=>"True"]) ?>
+               <?= $form->field($model, 'menu_name')->widget(CKEditor::className(), [
+                       'options' => ['rows' => 1],
+                       'preset' => 'advance'
+                   ]) ?>
+
                     <br>
                     <br>
 
