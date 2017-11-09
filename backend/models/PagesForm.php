@@ -1,18 +1,15 @@
 <?php
 namespace backend\models;
-
 use yii\base\Model;
-use common\models\User;
+use app\models\Pages;
 
 /**
  * Signup form
  */
 class PagesForm extends Model
 {
-    public $menu_name;
-
-
-
+    public $page_id;
+    public $page_html;
 
     /**
      * @inheritdoc
@@ -20,24 +17,30 @@ class PagesForm extends Model
     public function rules()
     {
         return [
-            ['menu_name', 'trim'],
-            ['menu_name','memu_submenu_true' 'required'],
-
+            ['page_id','required'],
+            ['page_html','required'],
 
         ];
     }
 
     /**
-     * Signs user up.
      *
-     * @return User|null the saved model or null if saving fails
      */
-    public function SaveMenu()
+    public function SavePages()
     {
-        if (!$this->validate()) {
-            return null;
-        }
+      if ($this->validate()) {
+          $form=new Pages();
+          $form->page_id = $this->page_id;
+          $form->page_html = $this->page_html;
+          $form->save();
 
-        return "Save";
+          var_dump("True SavePage");
+          return true;
+
+      }else{
+        echo "false";
+        return false;
+      }
     }
+
 }
