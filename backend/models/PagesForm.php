@@ -10,6 +10,7 @@ class PagesForm extends Model
 {
     public $page_id;
     public $page_html;
+    public $uploads;
 
     /**
      * @inheritdoc
@@ -19,6 +20,8 @@ class PagesForm extends Model
         return [
             ['page_id','required'],
             ['page_html','required'],
+            [['uploads'], 'file', 'skipOnEmpty' => false,
+                 'extensions' => 'png, jpg', 'maxFiles' => 4],
 
         ];
     }
@@ -32,6 +35,7 @@ class PagesForm extends Model
           $form=new Pages();
           $form->page_id = $this->page_id;
           $form->page_html = $this->page_html;
+          $form->uploads = $this->uploads;
           $form->save();
 
           var_dump("True SavePage");
