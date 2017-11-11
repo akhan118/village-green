@@ -1,13 +1,14 @@
+<<<<<<< HEAD
 <?php
 
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use backend\assets\AppAsset;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
 AppAsset::register($this);
@@ -29,7 +30,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'Village Green Hardware  313*222*2214',
+        'brandLabel' => 'Sunny Hardware',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -37,12 +38,8 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-        ['label' => 'Admin', 'url' => ['/site/admin']]
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
         $menuItems[] = '<li>'
@@ -72,7 +69,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; Coding Crash Course <?= date('Y') ?></p>
+        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
@@ -82,3 +79,15 @@ AppAsset::register($this);
 </body>
 </html>
 <?php $this->endPage() ?>
+=======
+﻿<?php
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+?>
+
+<?php $form = ActiveForm::begin(); ?>
+<?=$form->field($model,'menu_name') ?>
+<?=$form->field($model,'menu_order') ?>
+<?=Html::submitButton ("Submit",['class'=>'btn btn-success'])?>
+<?php ActiveForm::end(); ?>
+>>>>>>> 998046e436cb13712bf92d08db011295d7a5ad71
