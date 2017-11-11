@@ -146,13 +146,5 @@ class AppController extends Controller
 
         }
 
-public function actionEntry()
-{
-$article= new MenuForm;
-$article->menu_name = "Home";
-$article->menu_submenu_true=1;
-$article->menu_order= '1';
-$article->insert();
-}
 
 }

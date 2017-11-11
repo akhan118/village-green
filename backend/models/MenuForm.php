@@ -16,7 +16,9 @@ class MenuForm extends Model
         return [
             ['menu_name', 'required'],
             ['menu_submenu_true', 'required'],
-            ['menu_order', 'required']
+            ['menu_order', 'required'],
+
+
         ];
 
     }
