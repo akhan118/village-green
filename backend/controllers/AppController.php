@@ -8,8 +8,10 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
-
-
+use backend\models\MenuForm;
+use backend\models\PagesForm;
+use backend\models\SubMenuForm;
+use backend\views\app\Submenu;
 /**
  * Site controller
  */
@@ -83,15 +85,64 @@ class AppController extends Controller
     }
 
 
+/**
+    * Displays menu.
+    *
+    * @return mixed
+    */
+   public function actionMenu()
+
+   {
+            $model = new MenuForm;
+          if($model->load(Yii::$app->request->post()) && $model->validate())
+          {
+              // var_dump($model);
+               //echo "True SaveMenu";
+                $model->SaveMenu();
+
+
+          }else {
+          return $this->render('menu', ['model'=>$model,]);
+        }
+
+   }
 
         /**
-         * Displays menu.
+         * Displays Submenu.
          *
          * @return mixed
          */
-        public function actionMenu()
+        public function actionSubmenu()
         {
-            return $this->render('menu');
+          $model = new SubMenuForm;
+          if($model->load(Yii::$app->request->post()) && $model->validate())
+          {
+
+          }else {
+          return $this->render('submenu', ['model'=>$model,]);
+
+}
+        }
+
+        /**
+         * Displays Pages.
+         *
+         * @return mixed
+         */
+        public function actionPages()
+        {
+
+          $model = new pagesForm;
+          if($model->load(Yii::$app->request->post()) && $model->validate())
+          {
+            //var_dump($model);
+            //echo "True SaveMenu";
+            $model->SavePages();
+
+          }else {
+          return $this->render('pages', ['model'=>$model,]);
+
+          }
 
         }
 
