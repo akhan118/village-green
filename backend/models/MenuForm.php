@@ -7,8 +7,6 @@ use backend\models\Menu;
 class MenuForm extends Model
 {
 
-
-
     public $menu_name;
     public $menu_submenu_true;
     public $menu_order;
@@ -19,7 +17,7 @@ class MenuForm extends Model
             ['menu_name', 'required'],
             ['menu_submenu_true', 'required'],
             ['menu_order', 'required'],
-            
+
 
         ];
 

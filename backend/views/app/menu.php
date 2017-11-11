@@ -29,7 +29,9 @@ $this->params['breadcrumbs'][] = $this->title;
         <!--Selection BAR -->
         <div class="col-md-7">
 
-               <?= $form->field($model,'menu_name') -> textInput(['maxlength'=>"True"]) ?>
+          <?= $form->field($model,'menu_name') -> textInput(['maxlength'=>"True"]) ?>
+               <br>
+
                     <br>
                     <br>
 
