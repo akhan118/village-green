@@ -1,0 +1,147 @@
+@media (min-width: 992px) and (max-width: 1169px) {
+ 
+    
+    
+    
+    
+    
+}
+
+
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    .project-dec h4 {
+        font-size: 18px;
+    }
+    .main-menu ul.navbar-nav li a {
+        padding: 24px 12px;
+    }
+    .icon-header .menu-toggle + .navbar-collapse {
+        margin-right: 31px;
+    }
+    .title1 {
+        font-size: 34px;
+        padding: 0 30px;
+    }
+    .title2 {
+        padding: 0 30px;
+    }
+    .services-2 .service-page-text {
+        float: left;
+        width: 100%;
+    }
+
+    
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.container {width:300px}
+
+.logo {
+  height: inherit;
+  left: 0;
+  padding: 0;
+  position: absolute;
+  top: 1px;
+  z-index: 999999;
+}
+.logo a {
+    padding: 0;
+}
+.title1 {
+    font-size: 27px;
+    line-height: 36px;
+}
+.portfolio-menu li a {
+    margin: 0 8px;
+}
+.project-dec h4 {
+    font-size: 20px;
+}
+.footer-content {
+    margin-bottom: 40px;
+}
+.intro-area-2 .title1 {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 0;
+    padding: 0 20px;
+}
+    .intro-area-2 .title2 {
+    font-size: 14px;
+    padding: 0 20px;
+}
+.footer-social ul li {
+    margin: 5px 0;
+}
+.footer-social ul li a {
+    font-size: 11px;
+    padding: 5px 3px;
+}
+.awesome-project-2 .awesome-menu {
+    padding: 0px;
+}
+.portfolio-2 .single-awesome-project {
+    float: none;
+    margin-bottom: 0;
+    width: 100%;
+    display: block;
+}
+    .about-pic {
+        margin-bottom: 30px;
+    }
+    .about-list > li {
+        width: 100%;
+    }
+    .pri_table_list,.single-team-member {
+        margin-bottom: 30px;
+    }
+    .tab-menu {
+        margin-top: 30px;
+    }
+    .tab-menu ul.nav li a {
+        padding: 10px 8px;
+    }
+    .video-features > h2 {
+        font-size: 30px;
+    }
+    .team-content > h4 {
+        font-size: 20px;
+    }
+
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px}
+    .title1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .project-dec h4 {
+        font-size: 22px;
+    }
+    .intro-area-2 .title1 {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 0;
+        padding: 0 30px;
+    }
+    .intro-area-2 .title2 {
+        font-size: 20px;
+        padding: 0 30px;
+    }
+    .portfolio-2 .single-awesome-project {
+        float: left;
+        margin-bottom: 0;
+        width: 50%;
+    }
+    .tab-menu ul.nav li a {
+        padding: 10px 20px;
+    }
+	
+}
+ 
