@@ -12,7 +12,7 @@ use common\models\LoginForm;
 use backend\models\MenuForm;
 use backend\models\PagesForm;
 use backend\models\SubMenuForm;
-use backend\models\Upload;
+use backend\models\UploadEntry;
 use backend\views\app\Submenu;
 use backend\views\app\photosView;
 
@@ -167,7 +167,7 @@ class AppController extends Controller
             }
         }
 
-        return $this->render('upload', ['model' => $model]);
+        return $this->render('upload', ['model' => $model, ]);
     }
 }
 

@@ -16,9 +16,11 @@ class UploadForm extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $file;
+
     public static function tableName()
     {
-        return 'upload';
+        return 'uploadForm';
     }
 
     /**
