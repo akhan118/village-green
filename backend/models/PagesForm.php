@@ -35,7 +35,6 @@ class PagesForm extends Model
           $form=new Pages();
           $form->page_id = $this->page_id;
           $form->page_html = $this->page_html;
-          $form->uploads = $this->uploads;
           $form->save();
 
           var_dump("True SavePage");

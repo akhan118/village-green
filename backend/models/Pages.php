@@ -38,7 +38,6 @@ class Pages extends \yii\db\ActiveRecord
         return [
             'page_id' => 'Page ID',
             'page_html' => 'Page Html',
-            'uploads' => 'Image File',
-        ];
+         ];
     }
 }

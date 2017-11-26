@@ -7,4 +7,4 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 ?>
-<p>Looking Good  The button takes you to this new pages Page </p>
+<p>Looking Good  The button takes you to this new Pages page. </p>
