@@ -506,9 +506,9 @@ form.form-inline {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.intro-content {
-    padding: 180px 0;
-}
+/*.intro-content {
+    padding: 10px;
+}*/
 .title1 {
     font-weight: 700;
     text-transform: capitalize;

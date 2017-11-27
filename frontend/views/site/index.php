@@ -8,11 +8,8 @@ $this->title = 'My Yii Application';
 
 <div class="site-index">
 
-    <div class="jumbotron">
-        <h1>Welcome to Village Hardware</h1>
-
-  <!-- Start Slider Area -->
-  <div class="intro-area-2">
+             <!-- Start Slider Area -->
+  <div class="intro-area-2"
       <div class="header-overlay"></div>
       <div class="display-table">
           <div class="display-table-cell">
@@ -37,7 +34,7 @@ $this->title = 'My Yii Application';
                                   <h4 class="title2">Assumenda repud eum veniam optio modi sit.</h4>
                               </div>
                           </div>
-                          <div class="intro-content ">
+                             <div class="intro-content ">
                               <div class="slider-img">
                                   <img src="img/background/s3.jpg" alt="" class="slide-img">
                               </div>
@@ -45,20 +42,20 @@ $this->title = 'My Yii Application';
                                   <h1 class="title1">We are creative and minimal portfolio</h1>
                                   <h4 class="title2">Assumenda repud eum veniam optio modi sit.</h4>
                               </div>
-                          </div>
+                           </div>
                       </div>
                   </div>
               </div>
           </div>
       </div>
-  </div>
+  
   <!-- End Appointment Area -->
   <!-- Start portfolio Area -->
-  <div class="portfolio-area area-padding">
+ 
       <div class="container">
           <div class="row">
               <!-- Start Portfolio -page -->
-              <div class="awesome-project fix">
+             <!--  <div class="awesome-project fix">
                   <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="awesome-menu text-center">
                           <ul class="portfolio-menu">
@@ -69,7 +66,7 @@ $this->title = 'My Yii Application';
                           </ul>
                       </div>
                   </div>
-              </div>
+              </div> -->
               <div class="portfolio-content portfolio-6">
                   <!-- single-awesome-project start -->
                   <div class="col-md-4 col-sm-4 col-xs-12 photoshop">
@@ -263,104 +260,8 @@ $this->title = 'My Yii Application';
           </div>
       </div>
       <!-- End main content -->
-  </div>
-  <!-- End portfolio Area -->
-  <!-- Start Services Area -->
-  <div class="service-area area-padding">
-      <div class="container">
-          <div class="row fix">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                  <div class="section-head text-center">
-                      <h2>Services</h2>
-                  </div>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-4 col-sm-4 col-xs-12">
-                  <div class="service-details text-center">
-                      <div class="single-service">
-                          <a class="service-icon" href="#"><i class="fa fa-code"></i></a>
-                          <h4>Web Design</h4>
-                          <p>
-                              When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection of text within a single line.
-                          </p>
-                      </div>
-                  </div>
-                  <!-- end service-details -->
-              </div>
-              <div class="col-md-4 col-sm-4 col-xs-12">
-                  <div class="service-details text-center">
-                      <div class="single-service">
-                          <a class="service-icon" href="#"><i class="fa fa-bullhorn"></i></a>
-                          <h4>Web Development</h4>
-                          <p>
-                              When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection of text within a single line.
-                          </p>
-                      </div>
-                  </div>
-                  <!-- end service-details -->
-              </div>
-              <!-- end col-md-4 -->
-              <div class="col-md-4 col-sm-4 col-xs-12">
-                  <div class="service-details text-center">
-                      <div class="single-service">
-                          <a class="service-icon" href="#"><i class="fa fa-wordpress"></i></a>
-                          <h4>SociaL Marketing</h4>
-                          <p>
-                              When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection of text within a single line.
-                          </p>
-                      </div>
-                  </div>
-                  <!-- end service-details -->
-              </div>
-              <!-- end col-md-4 -->
-              <div class="col-md-4 col-sm-4 col-xs-12">
-                  <div class="service-details text-center">
-                      <div class="single-service">
-                          <a class="service-icon" href="#"><i class="fa fa-pencil-square-o"></i></a>
-                          <h4>Content Writing</h4>
-                          <p>
-                              When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection of text within a single line.
-                          </p>
-                      </div>
-                  </div>
-                  <!-- end service-details -->
-              </div>
-              <div class="col-md-4 col-sm-4 col-xs-12">
-                  <div class="service-details text-center">
-                      <div class="single-service">
-                          <a class="service-icon" href="#"><i class="fa fa-area-chart"></i></a>
-                          <h4>Products Braning</h4>
-                          <p>
-                              When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection of text within a single line.
-                          </p>
-                      </div>
-                  </div>
-                  <!-- end service-details -->
-              </div>
-              <!-- end col-md-4 -->
-              <div class="col-md-4 col-sm-4 col-xs-12">
-                  <div class="service-details text-center">
-                      <div class="single-service">
-                          <a class="service-icon" href="#"><i class="fa fa-ticket"></i></a>
-                          <h4>Online Support</h4>
-                          <p>
-                              When replacing a multi-lined selection of text, the generated dummy text maintains the amount of lines. When replacing a selection of text within a single line.
-                          </p>
-                      </div>
-                  </div>
-                  <!-- end service-details -->
-              </div>
-              <!-- end col-md-4 -->
-          </div>
-      </div>
-  </div>
-  <!-- end service -->
-
-
-
-
-
+  
+  
 
 
 

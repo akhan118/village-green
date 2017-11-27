@@ -63,9 +63,9 @@ AppAsset::register($this);
                         <!-- logo end -->
                         <div class="col-md-9 col-sm-9">
                             <!-- Search Button start -->
-                            <a href="#" class="search-btn" title="Quick view" data-toggle="modal" data-target="#searchModal">
+                          <!--   <a href="#" class="search-btn" title="Quick view" data-toggle="modal" data-target="#searchModal">
                                 <i class="fa fa-search"></i>
-                            </a>
+                            </a> -->
                             <div class="modal fade" id="searchModal" tabindex="-1" role="dialog">
                                 <div class="modal-dialog" role="document">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -116,17 +116,8 @@ AppAsset::register($this);
                                                 </ul>
                                             </li>
                                             <li><a href="about.html">About</a></li>
-                                            <li><a class="pagess" href="services.html">Services</a>
-                                                <ul class="sub-menu sub-1">
-                                                    <li><a href="sub-services-1.html">Business Managment</a></li>
-                                                    <li><a href="sub-services-2.html">Business Planning</a></li>
-                                                    <li><a href="sub-services-3.html">Online Support</a></li>
-                                                    <li><a href="sub-services-4.html">Online Marketing</a></li>
-                                                    <li><a href="sub-services-5.html">Financial Support</a></li>
-                                                    <li><a href="sub-services-6.html">Succesful Business</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="pagess" href="portfolio.html">Portfolio</a>
+                                            
+                                            <li><a class="pagess" href="portfolio.html">Hardware</a>
                                                 <ul class="sub-menu sub-1">
                                                     <li><a href="portfolio-1.html">Portfolio 2 column</a></li>
                                                     <li><a href="portfolio-2.html">Portfolio 3 column</a></li>
@@ -136,7 +127,7 @@ AppAsset::register($this);
                                                     <li><a href="project-2.html"> Single project two</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a class="pagess" href="blog-grid.html">Blog</a>
+                                            <li><a class="pagess" href="blog-grid.html">Lawn and Garden</a>
                                                 <ul class="sub-menu sub-1">
                                                     <li><a href="blog-grid.html">Blog grid</a></li>
                                                     <li><a href="blog-grid-2.html">Blog 3 column</a></li>
@@ -144,8 +135,33 @@ AppAsset::register($this);
                                                     <li><a href="blog-details.html">Blog Details</a></li>
                                                 </ul>
                                             </li>
+                                            <li><a class="pagess" href="portfolio.html">House and Gifts</a>
+                                                <ul class="sub-menu sub-1">
+                                                    <li><a href="portfolio-1.html">Portfolio 2 column</a></li>
+                                                    <li><a href="portfolio-2.html">Portfolio 3 column</a></li>
+                                                    <li><a href="portfolio-3.html">Portfolio 4 column</a></li>
+                                                    <li><a href="portfolio-4.html">Portfolio fullwidth </a></li>
+                                                    <li><a href="project-1.html"> Single project one</a></li>
+                                                    <li><a href="project-2.html"> Single project two</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="pagess" href="portfolio.html">Services Offered</a>
+                                                <ul class="sub-menu sub-1">
+                                                    <li><a href="portfolio-1.html">Portfolio 2 column</a></li>
+                                                    <li><a href="portfolio-2.html">Portfolio 3 column</a></li>
+                                                    <li><a href="portfolio-3.html">Portfolio 4 column</a></li>
+                                                    <li><a href="portfolio-4.html">Portfolio fullwidth </a></li>
+                                                    <li><a href="project-1.html"> Single project one</a></li>
+                                                    <li><a href="project-2.html"> Single project two</a></li>
+                                                </ul>
+                                            </li>
                                             <li><a href="contact.html">contacts</a></li>
+                                            <div class="footer-social text-right">
+                                              <ul>
+                                                 <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox"></div>
+                                              </ul>
                                         </ul>
+
                                     </div>
                                 </div>
                             </nav>
@@ -248,18 +264,7 @@ AppAsset::register($this);
                        </div>
                    </div>
                </div>
-        <div class="col-lg-6 col-md-6 col-sm-6">
-                  <div class="footer-top">
-                      <div class="footer-social text-right">
-                          <ul>
-                              <li><a href="#">Facebook</a></li>
-                              <li><a href="#">Twitter</a></li>
-                              <li><a href="#">Youtube</a></li>
-                              <li><a href="#">Instragram</a></li>
-                          </ul>
-                      </div>
-                   </div>
-                </div>
+       
      </div>
    </div>
 </div>
@@ -286,7 +291,7 @@ AppAsset::register($this);
 <script src="js/plugins.js"></script>
 <!-- main js -->
 <script src="js/main.js"></script>
-
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a1b551434afd75f"></script> 
 </body>
 </html>
 <?php $this->endPage() ?>
