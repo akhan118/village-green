@@ -11,14 +11,16 @@ use Yii;
  * @property string $description
  * @property integer $image_id
  */
-class Upload extends \yii\db\ActiveRecord
+class UploadForm extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
+    public $file;
+
     public static function tableName()
     {
-        return 'upload';
+        return 'uploadForm';
     }
 
     /**
@@ -27,7 +29,7 @@ class Upload extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['image_name', 'description'], 'required'],
+            [['image_id', 'description'], 'required'],
             [['image_name'], 'string', 'max' => 100],
             [['description'], 'string', 'max' => 255],
         ];
@@ -45,3 +47,8 @@ class Upload extends \yii\db\ActiveRecord
         ];
     }
 }
+
+
+
+
+

@@ -5,13 +5,18 @@ use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
+use yii\web\UploadedFile;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
 use backend\models\MenuForm;
 use backend\models\PagesForm;
 use backend\models\SubMenuForm;
+use backend\models\UploadEntry;
 use backend\views\app\Submenu;
+use backend\views\app\photosView;
+
+
 /**
  * Site controller
  */
@@ -140,11 +145,31 @@ class AppController extends Controller
             $model->SavePages();
 
           }else {
-          return $this->render('pages', ['model'=>$model,]);
+         
+            return $this->render('pages', ['model'=>$model,]);
 
           }
+        }
+        /**
+         * Displays Photos.
+         *
+         * @return mixed
+         */
+        public function actionPhoto()
+        {
+        $model = new UploadForm();
 
+        if (Yii::$app->request->isPost) {
+            $model->upload = UploadedFile::getInstance($model, 'uploads');
+            if ($model->upload()) {
+                // file is uploaded successfully
+                return;
+            }
         }
 
-
+        return $this->render('upload', ['model' => $model, ]);
+    }
 }
+
+
+

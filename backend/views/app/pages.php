@@ -21,8 +21,6 @@ $this->params['breadcrumbs'][] = $this->title;
                        'options' => ['rows' => 2],
                        'preset' => 'advance'
                    ]) ?>
-        <?= $form->field($model, 'uploads')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
-
         <br>
         <br>
 
