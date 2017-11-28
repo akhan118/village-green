@@ -15,6 +15,7 @@ use backend\models\SubMenuForm;
 use backend\models\UploadEntry;
 use backend\views\app\Submenu;
 use backend\views\app\photosView;
+use backend\models\UploadForm;
 
 
 /**
@@ -145,7 +146,7 @@ class AppController extends Controller
             $model->SavePages();
 
           }else {
-         
+
             return $this->render('pages', ['model'=>$model,]);
 
           }
@@ -157,19 +158,32 @@ class AppController extends Controller
          */
         public function actionPhoto()
         {
-        $model = new UploadForm();
+
+          $model = new UploadForm();
 
         if (Yii::$app->request->isPost) {
-            $model->upload = UploadedFile::getInstance($model, 'uploads');
+            $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
             if ($model->upload()) {
                 // file is uploaded successfully
                 return;
             }
         }
 
-        return $this->render('upload', ['model' => $model, ]);
+        return $this->render('upload', ['model' => $model]);
     }
+
+
+
+    //     $model = new UploadForm();
+    //
+    //     if (Yii::$app->request->isPost) {
+    //         $model->upload = UploadedFile::getInstance($model, 'uploads');
+    //         if ($model->upload()) {
+    //             // file is uploaded successfully
+    //             return;
+    //         }
+    //     }
+    //
+    //     return $this->render('upload', ['model' => $model, ]);
+    // }
 }
-
-
-
