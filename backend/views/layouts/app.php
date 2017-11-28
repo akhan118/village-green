@@ -68,7 +68,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     ["label" => "Menus", "url" => ["app/menu"], "icon" => "files-o"],
                                     ["label" => "Submenu", "url" => ["app/submenu"], "icon" => "files-o"],
                                     ["label" => "Pages", "url" => ["app/pages"], "icon" => "files-o"],
-                                    ["label" => "Photos", "url" => ["app/upload"], "icon" => "files-o"],
+                                    ["label" => "Photos", "url" => ["app/photo"], "icon" => "files-o"],
                                     [
                                         "label" => "Widgets",
                                         "icon" => "th",
