@@ -87,20 +87,7 @@ class SiteController extends Controller
         }
     }
 
-    public function actionUpload()
-    {
-        $model = new UploadForm();
-
-        if (Yii::$app->request->isPost) {
-            $model->uploads = UploadedFile::getInstance($model, 'uploads');
-            if ($model->upload()) {
-                // file is uploaded successfully
-                return;
-            }
-        }
-
-        return $this->render('upload', ['model' => $model]);
-    }
+   
 
     /**
      * Logout action.
