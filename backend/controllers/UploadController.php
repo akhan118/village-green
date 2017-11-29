@@ -1,12 +1,13 @@
 <?php
-namespace app\controllers;
+namespace backend\controllers;
 
 use Yii;
 use yii\web\Controller;
-use app\models\UploadForm;
+use app\models\Upload;
 use yii\web\UploadedFile;
+use backend\views\app\photos;
 
-class SiteController extends Controller
+class UploadController extends Controller
 {
     public function actionUpload()
     {
