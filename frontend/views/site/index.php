@@ -9,257 +9,138 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
              <!-- Start Slider Area -->
-  <div class="intro-area-2"
-      <div class="header-overlay"></div>
-      <div class="display-table">
-          <div class="display-table-cell">
+  <div class="intro-area-2">
+          <div class="header-overlay"></div>
+          <div class="display-table">
+            <div class="display-table-cell">
               <div class="container-full">
-                  <div class="row">
-                      <div class="intro-carousel">
-                          <div class="intro-content ">
-                              <div class="slider-img">
-                                  <img src="img/background/s.jpg" alt="" class="slide-img">
-                              </div>
-                              <div class="slide-content">
-                                  <h1 class="title1">We are creative and minimal portfolio</h1>
-                                  <h4 class="title2">Assumenda repud eum veniam optio modi sit.</h4>
-                              </div>
-                          </div>
-                          <div class="intro-content ">
-                              <div class="slider-img">
-                                  <img src="img/background/s2.jpg" alt="" class="slide-img">
-                              </div>
-                              <div class="slide-content">
-                                  <h1 class="title1">We are creative and minimal portfolio</h1>
-                                  <h4 class="title2">Assumenda repud eum veniam optio modi sit.</h4>
-                              </div>
-                          </div>
-                             <div class="intro-content ">
-                              <div class="slider-img">
-                                  <img src="img/background/s3.jpg" alt="" class="slide-img">
-                              </div>
-                              <div class="slide-content">
-                                  <h1 class="title1">We are creative and minimal portfolio</h1>
-                                  <h4 class="title2">Assumenda repud eum veniam optio modi sit.</h4>
-                              </div>
-                           </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+                <div class="row">
+        <div class="camera_full_width container-full">
+            <div id="camera_wrap">
+                <div data-src="https://placeimg.com/1920/800/nature" ><div class="camera_caption fadeFromBottom cap1">Hardware</div></div>
+        <div data-src="https://placeimg.com/1920/800/animals" ><div class="camera_caption fadeFromBottom cap2">Lawn &amp; Garden</div></div>
+        <div data-src="https://placeimg.com/1920/800/people" ><div class="camera_caption fadeFromBottom cap3">Ashley's Furniture</div></div>
       </div>
-  
+      </div>
+    </div>
+            </div>
+          </div>
+</div>
+</div>
   <!-- End Appointment Area -->
   <!-- Start portfolio Area -->
- 
-      <div class="container">
-          <div class="row">
-              <!-- Start Portfolio -page -->
-             <!--  <div class="awesome-project fix">
-                  <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="awesome-menu text-center">
-                          <ul class="portfolio-menu">
-                              <li><a href="#" class="active" data-filter="*" >All</a></li>
-                              <li><a href="#" data-filter=".degien">Degien</a></li>
-                              <li><a href="#" data-filter=".development">development</a></li>
-                              <li><a href="#" data-filter=".photoshop">photoshop</a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </div> -->
-              <div class="portfolio-content portfolio-6">
-                  <!-- single-awesome-project start -->
-                  <div class="col-md-4 col-sm-4 col-xs-12 photoshop">
-                      <div class="single-awesome-project">
-                          <div class="awesome-img">
-                              <a class="venobox" data-gall="myGallery" href="img/portfolio/default/1.jpg">
-                                  <img src="img/portfolio/default/1.jpg" alt="" />
-                              </a>
-                          </div>
-                          <div class="add-actions text-left">
-                              <div class="project-dec">
-                                  <h4>
-                                      <a href="#">Nice project</a>
-                                  </h4>
-                                  <span>
-                                      <a href="#">Web design</a>
-                                  </span>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-12 development">
-                      <!-- single-awesome-project start -->
-                      <div class="single-awesome-project">
-                          <div class="awesome-img">
-                              <a class="venobox" data-gall="myGallery" href="img/portfolio/default/2.jpg">
-                                  <img src="img/portfolio/default/2.jpg" alt="" />
-                              </a>
-                          </div>
-                          <div class="add-actions text-left">
-                              <div class="project-dec">
-                                  <h4>
-                                      <a href="#">Nice project</a>
-                                  </h4>
-                                  <span>
-                                      <a href="#">Web design</a>
-                                  </span>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- single-awesome-project end -->
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-12 degien">
-                      <!-- single-awesome-project start -->
-                      <div class="single-awesome-project">
-                          <div class="awesome-img">
-                              <a class="venobox" data-gall="myGallery" href="img/portfolio/default/3.jpg">
-                                  <img src="img/portfolio/default/3.jpg" alt="" />
-                              </a>
-                          </div>
-                          <div class="add-actions text-left">
-                              <div class="project-dec">
-                                  <h4>
-                                      <a href="#">Nice project</a>
-                                  </h4>
-                                  <span>
-                                      <a href="#">Web design</a>
-                                  </span>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- single-awesome-project end -->
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-12 development">
-                      <!-- single-awesome-project start -->
-                      <div class="single-awesome-project">
-                          <div class="awesome-img">
-                              <a class="venobox" data-gall="myGallery" href="img/portfolio/default/4.jpg">
-                                  <img src="img/portfolio/default/4.jpg" alt="" />
-                              </a>
-                          </div>
-                          <div class="add-actions text-left">
-                              <div class="project-dec">
-                                  <h4>
-                                      <a href="#">Nice project</a>
-                                  </h4>
-                                  <span>
-                                      <a href="#">Web design</a>
-                                  </span>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- single-awesome-project end -->
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-12 degien">
-                      <!-- single-awesome-project start -->
-                      <div class="single-awesome-project">
-                          <div class="awesome-img">
-                              <a class="venobox" data-gall="myGallery" href="img/portfolio/default/5.jpg">
-                                  <img src="img/portfolio/default/5.jpg" alt="" />
-                              </a>
-                          </div>
-                          <div class="add-actions text-left">
-                              <div class="project-dec">
-                                  <h4>
-                                      <a href="#">Nice project</a>
-                                  </h4>
-                                  <span>
-                                      <a href="#">Web design</a>
-                                  </span>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- single-awesome-project end -->
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-12 photoshop">
-                      <!-- single-awesome-project start -->
-                      <div class="single-awesome-project">
-                          <div class="awesome-img">
-                              <a class="venobox" data-gall="myGallery" href="img/portfolio/default/6.jpg">
-                                  <img src="img/portfolio/default/6.jpg" alt="" />
-                              </a>
-                          </div>
-                          <div class="add-actions text-left">
-                              <div class="project-dec">
-                                  <h4>
-                                      <a href="#">Nice project</a>
-                                  </h4>
-                                  <span>
-                                      <a href="#">Web design</a>
-                                  </span>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- single-awesome-project end -->
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-12 photoshop">
-                      <!-- single-awesome-project start -->
-                      <div class="single-awesome-project">
-                          <div class="awesome-img">
-                              <a class="venobox" data-gall="myGallery" href="img/portfolio/default/7.jpg">
-                                  <img src="img/portfolio/default/7.jpg" alt="" />
-                              </a>
-                          </div>
-                          <div class="add-actions text-left">
-                              <div class="project-dec">
-                                  <h4>
-                                      <a href="#">Nice project</a>
-                                  </h4>
-                                  <span>
-                                      <a href="#">Web design</a>
-                                  </span>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- single-awesome-project end -->
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-12 development">
-                      <!-- single-awesome-project start -->
-                      <div class="single-awesome-project">
-                          <div class="awesome-img">
-                              <a class="venobox" data-gall="myGallery" href="img/portfolio/default/8.jpg">
-                                  <img src="img/portfolio/default/8.jpg" alt="" />
-                              </a>
-                          </div>
-                          <div class="add-actions text-left">
-                              <div class="project-dec">
-                                  <h4>
-                                      <a href="#">Nice project</a>
-                                  </h4>
-                                  <span>
-                                      <a href="#">Web design</a>
-                                  </span>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- single-awesome-project end -->
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-12 photoshop">
-                      <!-- single-awesome-project start -->
-                      <div class="single-awesome-project">
-                          <div class="awesome-img">
-                              <a class="venobox" data-gall="myGallery" href="img/portfolio/default/9.jpg">
-                                  <img src="img/portfolio/default/9.jpg" alt="" />
-                              </a>
-                          </div>
-                          <div class="add-actions text-left">
-                              <div class="project-dec">
-                                  <h4>
-                                      <a href="#">Nice project</a>
-                                  </h4>
-                                  <span>
-                                      <a href="#">Web design</a>
-                                  </span>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- single-awesome-project end -->
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- End main content -->
+<div class="portfolio-area area-padding">
+<div class="container">
+<div class="row">
+<!-- Start Portfolio -page -->
+<div class="portfolio-content">
+<!-- single-awesome-project start -->
+<div class="col-md-4 col-sm-4 col-xs-12 photoshop">
+<div class="single-awesome-project">
+<div class="awesome-img">
+<a class="venobox" data-gall="myGallery" href="img/portfolio/default/1.jpg">
+    <img src="img/portfolio/default/1.jpg" alt="" />
+    <div class="add-actions text-center">
+        <div class="project-dec">
+            <h4>Nice project</h4>
+            <span>Web design</span>
+        </div>
+    </div>
+</a>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12 development">
+<!-- single-awesome-project start -->
+<div class="single-awesome-project">
+<div class="awesome-img">
+<a class="venobox" data-gall="myGallery" href="img/portfolio/default/2.jpg">
+    <img src="img/portfolio/default/2.jpg" alt="" />
+    <div class="add-actions text-center">
+        <div class="project-dec">
+            <h4>Nice project</h4>
+            <span>Web development</span>
+        </div>
+    </div>
+</a>
+</div>
+</div>
+<!-- single-awesome-project end -->
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12 degien">
+<!-- single-awesome-project start -->
+<div class="single-awesome-project">
+<div class="awesome-img">
+<a class="venobox" data-gall="myGallery" href="img/portfolio/default/3.jpg">
+    <img src="img/portfolio/default/3.jpg" alt="" />
+    <div class="add-actions text-center">
+        <div class="project-dec">
+            <h4>Nice project</h4>
+            <span>Web design</span>
+        </div>
+    </div>
+</a>
+</div>
+</div>
+<!-- single-awesome-project end -->
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12 development">
+<!-- single-awesome-project start -->
+<div class="single-awesome-project">
+<div class="awesome-img">
+<a class="venobox" data-gall="myGallery" href="img/portfolio/default/4.jpg">
+    <img src="img/portfolio/default/4.jpg" alt="" />
+    <div class="add-actions text-center">
+        <div class="project-dec">
+            <h4>Nice project</h4>
+            <span>Web design</span>
+        </div>
+    </div>
+</a>
+</div>
+</div>
+<!-- single-awesome-project end -->
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12 degien">
+<!-- single-awesome-project start -->
+<div class="single-awesome-project">
+<div class="awesome-img">
+<a class="venobox" data-gall="myGallery" href="img/portfolio/default/5.jpg">
+    <img src="img/portfolio/default/5.jpg" alt="" />
+    <div class="add-actions text-center">
+        <div class="project-dec">
+            <h4>Nice project</h4>
+            <span>Web design</span>
+        </div>
+    </div>
+</a>
+</div>
+</div>
+<!-- single-awesome-project end -->
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12 photoshop">
+<!-- single-awesome-project start -->
+<div class="single-awesome-project">
+<div class="awesome-img">
+<a class="venobox" data-gall="myGallery" href="img/portfolio/default/6.jpg">
+    <img src="img/portfolio/default/6.jpg" alt="" />
+    <div class="add-actions text-center">
+        <div class="project-dec">
+            <h4>Nice project</h4>
+            <span>Photoshop</span>
+        </div>
+    </div>
+</a>
+</div>
+</div>
+<!-- single-awesome-project end -->
+</div>
+</div>
+</div>
+</div>
+<!-- End main content -->
+</div>
+      
   
   
 
