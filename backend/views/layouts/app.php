@@ -70,63 +70,65 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     ["label" => "Pages", "url" => ["app/pages"], "icon" => "files-o"],
                                     ["label" => "Photos", "url" => ["app/photo"], "icon" => "files-o"],
                                     [
-                                        "label" => "Widgets",
+                                        "label" => "Edit View",
                                         "icon" => "th",
                                         "url" => "#",
                                         "items" => [
-                                            ["label" => "Menu", "url" => ["site/menu"]],
-                                            ["label" => "Panel", "url" => ["site/panel"]],
-                                        ],
+                                            ["label" => "Edit Menu", "url" => ["menu/index"]],
+                                            ["label" => "Edit Submenu", "url" => ["submenu/index"]]
+
+
                                     ],
-                                    [
-                                        "label" => "Badges",
-                                        "url" => "#",
-                                        "icon" => "table",
-                                        "items" => [
-                                            [
-                                                "label" => "Default",
-                                                "url" => "#",
-                                                "badge" => "123",
-                                            ],
-                                            [
-                                                "label" => "Success",
-                                                "url" => "#",
-                                                "badge" => "new",
-                                                "badgeOptions" => ["class" => "label-success"],
-                                            ],
-                                            [
-                                                "label" => "Danger",
-                                                "url" => "#",
-                                                "badge" => "!",
-                                                "badgeOptions" => ["class" => "label-danger"],
-                                            ],
-                                        ],
                                     ],
-                                    [
-                                        "label" => "Multilevel",
-                                        "url" => "#",
-                                        "icon" => "table",
-                                        "items" => [
-                                            [
-                                                "label" => "Second level 1",
-                                                "url" => "#",
-                                            ],
-                                            [
-                                                "label" => "Second level 2",
-                                                "url" => "#",
-                                                "items" => [
-                                                    [
-                                                        "label" => "Third level 1",
-                                                        "url" => "#",
-                                                    ],
-                                                    [
-                                                        "label" => "Third level 2",
-                                                        "url" => "#",
-                                                    ],
-                                                ],
-                                            ],
-                                        ],
-                                    ],
+                                    // [
+                                    //     "label" => "Badges",
+                                    //     "url" => "#",
+                                    //     "icon" => "table",
+                                    //     "items" => [
+                                    //         [
+                                    //             "label" => "Default",
+                                    //             "url" => "#",
+                                    //             "badge" => "123",
+                                    //         ],
+                                    //         [
+                                    //             "label" => "Success",
+                                    //             "url" => "#",
+                                    //             "badge" => "new",
+                                    //             "badgeOptions" => ["class" => "label-success"],
+                                    //         ],
+                                    //         [
+                                    //             "label" => "Danger",
+                                    //             "url" => "#",
+                                    //             "badge" => "!",
+                                    //             "badgeOptions" => ["class" => "label-danger"],
+                                    //         ],
+                                    //     ],
+                                    // ],
+                                    // [
+                                    //     "label" => "Multilevel",
+                                    //     "url" => "#",
+                                    //     "icon" => "table",
+                                    //     "items" => [
+                                    //         [
+                                    //             "label" => "Second level 1",
+                                    //             "url" => "#",
+                                    //         ],
+                                    //         [
+                                    //             "label" => "Second level 2",
+                                    //             "url" => "#",
+                                    //             "items" => [
+                                    //                 [
+                                    //                     "label" => "Third level 1",
+                                    //                     "url" => "#",
+                                    //                 ],
+                                    //                 [
+                                    //                     "label" => "Third level 2",
+                                    //                     "url" => "#",
+                                    //                 ],
+                                    //             ],
+                                    //         ],
+                                    //     ],
+                                    // ],
                                 ],
                             ]
                         )
@@ -167,7 +169,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="http://placehold.it/128x128" alt="">John Doe
+                                <img src="http://placehold.it/128x128" alt="">Admin
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -294,7 +296,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
         <!-- footer content -->
         <footer>
             <div class="pull-right">
-                Code Crash Course <br />
+                Coding Crash Course <br />
                <!--target="_blank">Yiister</a>  -->
             </div>
             <div class="clearfix"></div>
