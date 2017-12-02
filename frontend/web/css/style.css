@@ -134,7 +134,7 @@ margin: 0;
 padding: 0;
 }
 .area-padding {
-  padding: 80px 0;
+  padding: 0;
 }
 .blog-padding {
     padding: 80px 0 20px;
@@ -557,7 +557,7 @@ form.form-inline {
 /*  6.Portfolio Area
 /*--------------------------------*/
 .portfolio-area {
-  background: #f8f8f8 none repeat scroll 0 0;
+  background: none repeat scroll 0 0;
 }
 .portfolio-menu li a {
     color: #666;
@@ -605,7 +605,7 @@ form.form-inline {
   margin-bottom: 30px;
 }
 .awesome-img > a::after {
-  background: rgba(203, 108, 50, 0.5) none repeat scroll 0 0;
+  background: #dd5810 none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;

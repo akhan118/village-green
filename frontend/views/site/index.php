@@ -17,9 +17,9 @@ $this->title = 'My Yii Application';
                 <div class="row">
         <div class="camera_full_width container-full">
             <div id="camera_wrap">
-                <div data-src="https://placeimg.com/1920/800/nature" ><div class="camera_caption fadeFromBottom cap1">Hardware</div></div>
-        <div data-src="https://placeimg.com/1920/800/animals" ><div class="camera_caption fadeFromBottom cap2">Lawn &amp; Garden</div></div>
-        <div data-src="https://placeimg.com/1920/800/people" ><div class="camera_caption fadeFromBottom cap3">Ashley's Furniture</div></div>
+                <div data-src="img/background/welcome.jpeg" ><div class="camera_caption fadeFromBottom cap1">Hardware</div></div>
+        <div data-src="img/background/lawn and garden.jpeg" ><div class="camera_caption fadeFromBottom cap2">Lawn &amp; Garden</div></div>
+        <div data-src="img/background/ashleysld.jpeg" ><div class="camera_caption fadeFromBottom cap3">Ashley's Furniture</div></div>
       </div>
       </div>
     </div>
@@ -39,11 +39,11 @@ $this->title = 'My Yii Application';
 <div class="single-awesome-project">
 <div class="awesome-img">
 <a class="venobox" data-gall="myGallery" href="img/portfolio/default/1.jpg">
-    <img src="img/portfolio/default/1.jpg" alt="" />
+    <img src="img/portfolio/default/1.jpeg" alt="" />
     <div class="add-actions text-center">
         <div class="project-dec">
-            <h4>Nice project</h4>
-            <span>Web design</span>
+            <h4>ProHardware</h4>
+            <span>Features</span>
         </div>
     </div>
 </a>
@@ -55,11 +55,11 @@ $this->title = 'My Yii Application';
 <div class="single-awesome-project">
 <div class="awesome-img">
 <a class="venobox" data-gall="myGallery" href="img/portfolio/default/2.jpg">
-    <img src="img/portfolio/default/2.jpg" alt="" />
+    <img src="img/portfolio/default/2.jpeg" alt="" />
     <div class="add-actions text-center">
         <div class="project-dec">
-            <h4>Nice project</h4>
-            <span>Web development</span>
+            <h4>Ashleys</h4>
+            <span>Designs and Goods</span>
         </div>
     </div>
 </a>
@@ -72,11 +72,11 @@ $this->title = 'My Yii Application';
 <div class="single-awesome-project">
 <div class="awesome-img">
 <a class="venobox" data-gall="myGallery" href="img/portfolio/default/3.jpg">
-    <img src="img/portfolio/default/3.jpg" alt="" />
+    <img src="img/portfolio/default/3.jpeg" alt="" />
     <div class="add-actions text-center">
         <div class="project-dec">
-            <h4>Nice project</h4>
-            <span>Web design</span>
+            <h4>Whats New</h4>
+            <span>Happenings and Events</span>
         </div>
     </div>
 </a>
@@ -89,12 +89,11 @@ $this->title = 'My Yii Application';
 <div class="single-awesome-project">
 <div class="awesome-img">
 <a class="venobox" data-gall="myGallery" href="img/portfolio/default/4.jpg">
-    <img src="img/portfolio/default/4.jpg" alt="" />
+    <img src="img/portfolio/default/4.jpeg" alt="" />
     <div class="add-actions text-center">
         <div class="project-dec">
-            <h4>Nice project</h4>
-            <span>Web design</span>
-        </div>
+            <h4>Hardware</h4>
+         </div>
     </div>
 </a>
 </div>
@@ -106,11 +105,10 @@ $this->title = 'My Yii Application';
 <div class="single-awesome-project">
 <div class="awesome-img">
 <a class="venobox" data-gall="myGallery" href="img/portfolio/default/5.jpg">
-    <img src="img/portfolio/default/5.jpg" alt="" />
+    <img src="img/portfolio/default/5.jpeg" alt="" />
     <div class="add-actions text-center">
         <div class="project-dec">
-            <h4>Nice project</h4>
-            <span>Web design</span>
+            <h4>Housewares</h4>
         </div>
     </div>
 </a>
@@ -123,11 +121,10 @@ $this->title = 'My Yii Application';
 <div class="single-awesome-project">
 <div class="awesome-img">
 <a class="venobox" data-gall="myGallery" href="img/portfolio/default/6.jpg">
-    <img src="img/portfolio/default/6.jpg" alt="" />
+    <img src="img/portfolio/default/6.jpeg" alt="" />
     <div class="add-actions text-center">
         <div class="project-dec">
-            <h4>Nice project</h4>
-            <span>Photoshop</span>
+            <h4>Special Services</h4>
         </div>
     </div>
 </a>
