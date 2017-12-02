@@ -7,6 +7,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use yii\helpers\Url;
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -104,11 +105,11 @@ AppAsset::register($this);
                                 <div class="collapse navbar-collapse" id="navbar-example">
                                     <div class="main-menu">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li><a href="index-7.html">Home</a>
+                                            <li><a href=<?php echo Url::to(['site/index']) ?>>Home</a>
 
                                             </li>
                                             <li><a href="about.html">About</a></li>
-                                            <li><a class="pagess" href="services.html">Hardware</a>
+                                            <li><a class="pagess" href=<?php echo Url::to(['site/department']) ?>>Hardware</a>
                                                 <ul class="sub-menu sub-1">
                                                     <li><a href="sub-services-1.html">Electrical</a></li>
                                                     <li><a href="sub-services-2.html">Plumbing</a></li>
