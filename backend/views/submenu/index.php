@@ -30,8 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'visible_or_invisible',
             'picture_path',
             // 'text_field',
-            ['class' => yii\grid\ActionColumn::className(),'template'=>'{view} {update}'],
-      //      ['class' => 'yii\grid\ActionColumn'],
+      //      ['class' => yii\grid\ActionColumn::className(),'template'=>'{view} {update}'],
+            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 </div>
