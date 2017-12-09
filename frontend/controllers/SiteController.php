@@ -21,6 +21,8 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
+
+
     public function behaviors()
     {
         return [
@@ -72,6 +74,16 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
+      $rows = (new \yii\db\Query())
+          ->select(['menu_name', 'menu_order'])
+          ->from('menu')
+          ->all();
+
+
+
+      Yii::$app->view->params['menu'] = $rows;
+
         return $this->render('index');
     }
     /**
@@ -187,6 +199,12 @@ class SiteController extends Controller
     public function actionSpecialtyitems()
     {
         return $this->render('specialtyitems');
+    }
+
+
+    public function actionPage()
+    {
+        return $this->render('department');
     }
 
     /**
