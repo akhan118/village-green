@@ -105,10 +105,14 @@ AppAsset::register($this);
                                 <div class="collapse navbar-collapse" id="navbar-example">
                                     <div class="main-menu">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li><a href=<?php echo Url::to(['site/index']) ?>>Home</a>
+                                            <li><a href=<?php echo Url::to(['site/index']) ?>><?
+echo $this->params['menu'][0]['menu_name'];
+// var_dump($this->params['menu'][0]['menu_name']);
+
+                                            //echo $this->params['menu'];?></a>
 
                                             </li>
-                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="about.html"><?echo $this->params['menu'][1]['menu_name'];?></a></li>
                                             <li><a class="pagess" href=<?php echo Url::to(['site/department']) ?>>Hardware</a>
                                                 <ul class="sub-menu sub-1">
                                                     <li><a href="sub-services-1.html">Electrical</a></li>
@@ -132,7 +136,7 @@ AppAsset::register($this);
                                                     <li><a href="sub-services-1.html">Small Appliances</a></li>
                                                      <li><a href="sub-services-2.html">Gifts &amp; Accessories</a></li>
                                                         <li><a href="sub-services-3.html">Ashley Home Furnishing</a></li>
-                                                    </ul>  
+                                                    </ul>
                                                 </li>
                                             <li><a class="pagess" href="blog-grid.html">Specialty Items</a>
                                                 <ul class="sub-menu sub-1">
@@ -148,7 +152,7 @@ AppAsset::register($this);
                                               <ul>
                                                  <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox"></div>
                                               </ul>
-                                       
+
                                     </div>
                                     </div>
                                 </div>
@@ -220,7 +224,7 @@ AppAsset::register($this);
                                               <ul>
                                                  <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox"></div>
                                               </ul>
-                                       
+
                                     </div>
                             </div>
                         </div>
@@ -325,7 +329,7 @@ AppAsset::register($this);
                        </div>
                    </div>
                </div>
-       
+
      </div>
    </div>
 </div>
@@ -352,7 +356,7 @@ AppAsset::register($this);
 <script src="js/plugins.js"></script>
 <!-- main js -->
 <script src="js/main.js"></script>
-<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a1b551434afd75f"></script> 
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a1b551434afd75f"></script>
 
 <script src="js/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script><script type="text/javascript">$('#list_photos').carouFredSel({ responsive: true, width: '100%', scroll: 2, items: {width: 320,visible: {min: 2, max: 6}} });</script><script src="js/camera/scripts/camera.min.js" type="text/javascript"></script>
                 <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
