@@ -31,7 +31,7 @@ class MenuForm extends Model
             $form->menu_order = $this->menu_order;
             $form->save();
 
-            var_dump("True SaveMenu");
+            // var_dump("True SaveMenu");
             return true;
 
         }else{

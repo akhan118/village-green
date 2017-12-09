@@ -40,8 +40,7 @@ class SubMenuForm extends Model
           $form->visible_or_invisible = $this->visible_or_invisible;
           $form->menu_id = $this->menu_id;
           $form->save();
-
-          var_dump("True SaveMenu");
+          // var_dump("True SaveMenu");
           return true;
 
       }else{
