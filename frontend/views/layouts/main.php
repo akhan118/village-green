@@ -108,8 +108,8 @@ AppAsset::register($this);
                                             <li><a href=<?php echo Url::to(['site/index']) ?>>Home</a>
 
                                             </li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a class="pagess" href=<?php echo Url::to(['site/department']) ?>>Hardware</a>
+                                            <li><a href=<?php echo Url::to(['site/about']) ?>>About</a></li>
+                                            <li><a class="pagess" href=<?php echo Url::to(['site/hardware']) ?>>Hardware</a>
                                                 <ul class="sub-menu sub-1">
                                                     <li><a href="sub-services-1.html">Electrical</a></li>
                                                     <li><a href="sub-services-2.html">Plumbing</a></li>
@@ -117,7 +117,7 @@ AppAsset::register($this);
 
                                                 </ul>
                                             </li>
-                                            <li><a class="pagess" href="portfolio.html">Lawn &amp; Garden</a>
+                                            <li><a class="pagess" href=<?php echo Url::to(['site/lawnandgarden']) ?>>Lawn &amp; Garden</a>
                                                 <ul class="sub-menu sub-1">
                                                     <li><a href="portfolio-1.html">Portfolio 2 column</a></li>
                                                     <li><a href="portfolio-2.html">Portfolio 3 column</a></li>
@@ -127,14 +127,14 @@ AppAsset::register($this);
                                                     <li><a href="project-2.html"> Single project two</a></li>
                                                 </ul>
                                             </li>
-                                               <li><a class="pagess" href="services.html">House &amp; Gifts</a>
+                                               <li><a class="pagess" href=<?php echo Url::to(['site/houseandgifts']) ?>>House &amp; Gifts</a>
                                                    <ul class="sub-menu sub-1">
                                                     <li><a href="sub-services-1.html">Small Appliances</a></li>
                                                      <li><a href="sub-services-2.html">Gifts &amp; Accessories</a></li>
                                                         <li><a href="sub-services-3.html">Ashley Home Furnishing</a></li>
                                                     </ul>  
                                                 </li>
-                                            <li><a class="pagess" href="blog-grid.html">Specialty Items</a>
+                                            <li><a class="pagess" href=<?php echo Url::to(['site/specialtyitems']) ?>>Specialty Items</a>
                                                 <ul class="sub-menu sub-1">
                                                     <li><a href="blog-grid.html">Services Offered</a></li>
                                                     <li><a href="blog-grid-2.html">Pampered Pets</a></li>
@@ -142,7 +142,7 @@ AppAsset::register($this);
                                                     <li><a href="blog-details.html">Camping</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">contact</a></li>
+                                            <li><a href=<?php echo Url::to(['site/contact']) ?>>contact</a></li>
                                         </ul>
                                         <div class="social text-right">
                                               <ul>
