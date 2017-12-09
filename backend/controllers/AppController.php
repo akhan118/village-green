@@ -159,7 +159,7 @@ class AppController extends Controller
         public function actionPhoto()
         {
 
-          $model = new UploadForm();
+          $model = new UploadForm;
 
         if (Yii::$app->request->isPost) {
             $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
