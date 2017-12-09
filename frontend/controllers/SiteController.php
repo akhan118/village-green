@@ -171,6 +171,12 @@ class SiteController extends Controller
         return $this->render('department');
     }
 
+
+    public function actionPage()
+    {
+        return $this->render('department');
+    }
+
     /**
 
      * Signs user up.
