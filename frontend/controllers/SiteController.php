@@ -161,45 +161,45 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-   /**
-     * Displays about page.
-     *
-     * @return mixed
-     */
-    public function actionHardware()
-    {
-        return $this->render('hardware');
-    }
+   // /**
+   //   * Displays about page.
+   //   *
+   //   * @return mixed
+   //   */
+   //  public function actionHardware()
+   //  {
+   //      return $this->render('hardware');
+   //  }
 
-     /**
-     * Displays about page.
-     *
-     * @return mixed
-     */
-    public function actionHouseandgifts()
-    {
-        return $this->render('houseandgifts');
-    }
+   //   /**
+   //   * Displays about page.
+   //   *
+   //   * @return mixed
+   //   */
+   //  public function actionHouseandgifts()
+   //  {
+   //      return $this->render('houseandgifts');
+   //  }
 
-     /**
-     * Displays about page.
-     *
-     * @return mixed
-     */
-    public function actionLawnandgarden()
-    {
-        return $this->render('lawnandgarden');
-    }
+   //   /**
+   //   * Displays about page.
+   //   *
+   //   * @return mixed
+   //   */
+   //  public function actionLawnandgarden()
+   //  {
+   //      return $this->render('lawnandgarden');
+   //  }
 
-     /**
-     * Displays about page.
+   //   /**
+   //   * Displays about page.
 
-     * @return mixed
-     */
-    public function actionSpecialtyitems()
-    {
-        return $this->render('specialtyitems');
-    }
+   //   * @return mixed
+   //   */
+   //  public function actionSpecialtyitems()
+   //  {
+   //      return $this->render('specialtyitems');
+   //  }
 
 
     public function actionPage()
