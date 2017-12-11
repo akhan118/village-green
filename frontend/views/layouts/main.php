@@ -106,7 +106,7 @@ AppAsset::register($this);
                                     <div class="main-menu">
                                         <ul class="nav navbar-nav navbar-right">
                                             <li><a href=<?php echo Url::to(['site/index']) ?>><?
-if(isset($this->params['menu'])){echo $this->params['menu'][0]['Home'];}
+if(isset($this->params['menu'])){echo $this->params['menu'][0]['index'];}
 // var_dump($this->params['menu'][0]['menu_name']);
 
                                             //echo $this->params['menu'];?></a>
