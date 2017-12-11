@@ -106,17 +106,15 @@ AppAsset::register($this);
                                     <div class="main-menu">
                                         <ul class="nav navbar-nav navbar-right">
                                             <li><a href=<?php echo Url::to(['site/index']) ?>><?
-if(isset($this->params['menu'])){echo $this->params['menu'][0]['department'];}
-// var_dump($this->params['menu'][0]['menu_name']);
-
-                                            //echo $this->params['menu'];?></a>
+if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}
+// var_dump($this->params['menu'][0]['menu_name']); //echo $this->params['menu'];?></a>
 
                                             </li>
 
                                             <li><a href=<?php echo Url::to(['site/about']) ?>>About</a></li>
                                             <li><a class="pagess" href=<?php echo Url::to(['site/hardware']) ?>>Hardware</a>
 
-                                            <li><a href="about.html"><? if(isset($this->params['menu'])){echo $this->params['menu'][1]['department'];}?></a></li>
+                                            <li><a href="about.html"><? if(isset($this->params['menu'])){echo $this->params['menu'][1]['menu_name'];}?></a></li>
                                             <li><a class="pagess" href=<?php echo Url::to(['site/department']) ?>>Hardware</a>
 
                                                 <ul class="sub-menu sub-1">
