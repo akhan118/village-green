@@ -32,7 +32,7 @@ class Submenus extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['submenu_name', 'submenu_id', 'visible_or_invisible'],['text_field'], ['menu_id'] 'required'],
+            [['submenu_name', 'submenu_id', 'visible_or_invisible'],['text_field'], ['menu_id'], 'required'],
             [['submenu_id', 'menu_id'], 'integer'],
             [['submenu_name','picture_path', 'text_field'], 'string', 'max' => 32],
         ];

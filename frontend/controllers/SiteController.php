@@ -22,6 +22,7 @@ class SiteController extends Controller
      * @inheritdoc
      */
 
+     public $menu;
 
     public function behaviors()
     {
@@ -76,13 +77,13 @@ class SiteController extends Controller
     {
 
       $rows = (new \yii\db\Query())
-          ->select(['menu_name', 'menu_order'])
+          ->select(['menu_name', 'menu_order','menu_id'])
           ->from('menu')
           ->all();
 
+      $this->menu = $rows;
 
-
-      Yii::$app->view->params['menu'] = $rows;
+      Yii::$app->view->params['menu'] = $this->menu;
 
         return $this->render('index');
     }
@@ -174,7 +175,19 @@ class SiteController extends Controller
 
     public function actionPage()
     {
+
+      $rows = (new \yii\db\Query())
+          ->select(['menu_name', 'menu_order','menu_id'])
+          ->from('menu')
+          ->all();
+
+        $request = Yii::$app->request;
+        $id = $request->get('id');
+        var_dump($id);
+        var_dump($this->menu);
+        Yii::$app->view->params['menu'] = $rows;
         return $this->render('department');
+
     }
 
     /**
