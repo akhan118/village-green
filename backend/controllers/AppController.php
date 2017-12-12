@@ -105,6 +105,8 @@ class AppController extends Controller
               // var_dump($model);
                //echo "True SaveMenu";
                 $model->SaveMenu();
+                $model = new MenuForm;
+                return $this->render('menu', ['model'=>$model,]);
 
 
           }else {
@@ -124,6 +126,7 @@ class AppController extends Controller
           if($model->load(Yii::$app->request->post()) && $model->validate())
           {
 
+            $model->SaveSubMenu();
           }else {
           return $this->render('submenu', ['model'=>$model,]);
 
@@ -159,7 +162,7 @@ class AppController extends Controller
         public function actionPhoto()
         {
 
-          $model = new UploadForm();
+          $model = new UploadForm;
 
         if (Yii::$app->request->isPost) {
             $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
