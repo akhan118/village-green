@@ -112,7 +112,7 @@ if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}
                                             //echo $this->params['menu'];?></a>
 
                                             </li>
-                                            <li><a href="about.html"><? if(isset($this->params['menu'])){echo $this->params['menu'][1]['menu_name'];}
+                                            <li><a href=<? echo Url::to(['site/page/', 'id' => $this->params['menu'][1]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][1]['menu_name'];}
 ?></a></li>
                                             <li><a class="pagess" href=<?php echo Url::to(['site/department']) ?>>Hardware</a>
                                                 <ul class="sub-menu sub-1">
