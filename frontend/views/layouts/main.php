@@ -110,11 +110,16 @@ if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}
 // var_dump($this->params['menu'][0]['menu_name']); //echo $this->params['menu'];?></a>
 
                                             </li>
+<<<<<<< HEAD
 
                                             <li><a href=<?php echo Url::to(['site/about']) ?>>About</a></li>
                                             <li><a class="pagess" href=<?php echo Url::to(['site/hardware']) ?>>Hardware</a>
 
                                             <li><a href="about.html"><? if(isset($this->params['menu'])){echo $this->params['menu'][1]['menu_name'];}?></a></li>
+=======
+                                            <li><a href=<? echo Url::to(['site/page/', 'id' => $this->params['menu'][1]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][1]['menu_name'];}
+?></a></li>
+>>>>>>> c71543f96223cce4cd1c446bed9ddc329e2b3e5f
                                             <li><a class="pagess" href=<?php echo Url::to(['site/department']) ?>>Hardware</a>
 
                                                 <ul class="sub-menu sub-1">
