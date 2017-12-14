@@ -22,7 +22,29 @@ class m171109_033633_pages extends Migration
       $this->createTable('{{%pages}}', [
           'page_id' => $this->primaryKey(),
           'page_html' => $this->text(),
+          'menu_id' => $this->integer()->notNull(),
+          'submenu_id' => $this->integer(),
       ], $tableOptions);
+
+      // add foreign key for table `menu`
+      $this->addForeignKey(
+          'menu_pages',
+          'pages',
+          'menu_id',
+          'menu',
+          'menu_id',
+          'CASCADE'
+      );
+
+      // add foreign key for table `menu`
+      $this->addForeignKey(
+          'submenu_pages',
+          'pages',
+          'submenu_id',
+          'submenus',
+          'submenu_id',
+          'CASCADE'
+      );
 
     }
 
