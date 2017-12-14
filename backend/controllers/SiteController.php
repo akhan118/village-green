@@ -62,7 +62,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->redirect( array('app/index') );
     }
 
     /**
@@ -87,7 +87,7 @@ class SiteController extends Controller
         }
     }
 
-   
+
 
     /**
      * Logout action.
