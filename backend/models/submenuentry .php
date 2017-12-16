@@ -30,7 +30,7 @@ use Yii;
  */
 class Products extends \yii\db\ActiveRecord
 {
-    /**
+  /**
      * @inheritdoc
      */
     public static function tableName()

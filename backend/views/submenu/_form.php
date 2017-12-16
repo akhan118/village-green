@@ -18,11 +18,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'menu_id')->textInput() ?>
 
-    <?= $form->field($model, 'visible_or_invisible')->textInput() ?>
+    <!-- <?= $form->field($model, 'visible_or_invisible')->textInput() ?> -->
 
-    <?= $form->field($model, 'picture_path')->textInput(['maxlength' => true]) ?>
+    <!-- <?= $form->field($model, 'picture_path')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'text_field')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'text_field')->textInput(['maxlength' => true]) ?> -->
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

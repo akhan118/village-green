@@ -21,9 +21,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'menu_id') ?>
 
-    <?= $form->field($model, 'visible_or_invisible') ?>
-
-    <?= $form->field($model, 'picture_path') ?>
+  
 
     <?php // echo $form->field($model, 'text_field') ?>
 

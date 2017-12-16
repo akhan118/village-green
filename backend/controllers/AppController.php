@@ -142,7 +142,8 @@ class AppController extends Controller
           $submenuTable->menu_id=$MenuId;
           $submenuTable->save();
             var_dump($submenuTable->save());
-
+            $model = new SubMenuForm;
+            return $this->render('submenu', ['model'=>$model,]);
 
           }else {
           return $this->render('submenu', ['model'=>$model,]);
