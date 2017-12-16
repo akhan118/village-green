@@ -31,9 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'submenu_id',
             'submenu_name',
             'menu_id',
-            'visible_or_invisible',
-            'picture_path',
-            'text_field',
+            
         ],
     ]) ?>
 
