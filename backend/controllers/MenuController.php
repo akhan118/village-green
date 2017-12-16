@@ -36,7 +36,7 @@ class MenuController extends Controller
      */
     public function actionIndex()
     {
-       echo "actionIndex";
+
         $searchModel = new MenuSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -53,7 +53,7 @@ class MenuController extends Controller
      */
     public function actionView($id)
     {
-      echo "actionView";
+
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -66,7 +66,7 @@ class MenuController extends Controller
      */
     public function actionCreate()
     {
-echo"actionCreate";
+
         $model = new Menu();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -86,7 +86,7 @@ echo"actionCreate";
      */
     public function actionUpdate($id)
     {
-echo"actionUpdate";
+
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -120,7 +120,7 @@ echo"actionUpdate";
      */
     protected function findModel($id)
     {
-  echo "findModel";
+
         if (($model = Menu::findOne($id)) !== null) {
             return $model;
         } else {

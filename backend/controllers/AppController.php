@@ -134,14 +134,12 @@ class AppController extends Controller
            $sumMenuName=$data['submenu_name'];
            $MenuId=$data['menu_id'];
 
-           var_dump($sumMenuName);
-           var_dump($MenuId);
 
           $submenuTable= new Submenus();
           $submenuTable->submenu_name=$sumMenuName;
           $submenuTable->menu_id=$MenuId;
           $submenuTable->save();
-            var_dump($submenuTable->save());
+
             $model = new SubMenuForm;
             return $this->render('submenu', ['model'=>$model,]);
 
