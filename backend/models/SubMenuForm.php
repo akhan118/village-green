@@ -38,7 +38,6 @@ class SubMenuForm extends Model
       if ($this->validate()) {
           $form=new Submenus();
           $form->submenu_name = $this->submenu_name;
-          $form->visible_or_invisible = $this->visible_or_invisible;
           $form->menu_id = $this->menu_id;
           $form->save();
           // var_dump("True SaveMenu");
