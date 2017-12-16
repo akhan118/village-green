@@ -105,56 +105,35 @@ AppAsset::register($this);
                                 <div class="collapse navbar-collapse" id="navbar-example">
                                     <div class="main-menu">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li><a href=<?php echo Url::to(['site/index']) ?>><?
-if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}
-// var_dump($this->params['menu'][0]['menu_name']);
 
-                                            //echo $this->params['menu'];?></a>
+                                          <?
+                                          //var_dump($this->params['menu']);
+                                          //echo  count($this->params['menu']);
+                                          if ($this->params['menu']) {  ?>
+                                            <li><a href=<?php echo Url::to(['site/index']) ?>><?if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}?></a></li>
+                                            <?
+                                            for($i=1; $i < count($this->params['menu']); $i++)
+                                            {
+                                            ?>
 
-                                            </li>
-                                            <li><a href=<? echo Url::to(['site/page/', 'id' => $this->params['menu'][1]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][1]['menu_name'];}
-?></a></li>
-                                            <li><a class="pagess" href=<?php echo Url::to(['site/department']) ?>>Hardware</a>
-                                                <ul class="sub-menu sub-1">
-                                                    <li><a href="sub-services-1.html">Electrical</a></li>
-                                                    <li><a href="sub-services-2.html">Plumbing</a></li>
-                                                    <li><a href="sub-services-3.html">Paint</a></li>
-
-                                                </ul>
-                                            </li>
-                                            <li><a class="pagess" href="portfolio.html">Lawn &amp; Garden</a>
-                                                <ul class="sub-menu sub-1">
-                                                    <li><a href="portfolio-1.html">Portfolio 2 column</a></li>
-                                                    <li><a href="portfolio-2.html">Portfolio 3 column</a></li>
-                                                    <li><a href="portfolio-3.html">Portfolio 4 column</a></li>
-                                                    <li><a href="portfolio-4.html">Portfolio fullwidth </a></li>
-                                                    <li><a href="project-1.html"> Single project one</a></li>
-                                                    <li><a href="project-2.html"> Single project two</a></li>
-                                                </ul>
-                                            </li>
-                                               <li><a class="pagess" href="services.html">House &amp; Gifts</a>
-                                                   <ul class="sub-menu sub-1">
-                                                    <li><a href="sub-services-1.html">Small Appliances</a></li>
-                                                     <li><a href="sub-services-2.html">Gifts &amp; Accessories</a></li>
-                                                        <li><a href="sub-services-3.html">Ashley Home Furnishing</a></li>
-                                                    </ul>
-                                                </li>
-                                            <li><a class="pagess" href="blog-grid.html">Specialty Items</a>
-                                                <ul class="sub-menu sub-1">
-                                                    <li><a href="blog-grid.html">Services Offered</a></li>
-                                                    <li><a href="blog-grid-2.html">Pampered Pets</a></li>
-                                                    <li><a href="blog-single.html">Fishing</a></li>
-                                                    <li><a href="blog-details.html">Camping</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">contact</a></li>
-                                        </ul>
-                                        <div class="social text-right">
-                                              <ul>
-                                                 <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox"></div>
+                                            <li><a class="pagess" href=<? echo Url::to(['site/page/', 'id' => $this->params['menu'][$i]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][$i]['menu_name'];}?></a>
+                                              <ul class="sub-menu sub-1">
+                                                  <li><a href="sub-services-1.html">Electrical</a></li>
+                                                  <li><a href="sub-services-2.html">Plumbing</a></li>
+                                                  <li><a href="sub-services-3.html">Paint</a></li>
                                               </ul>
+                                            </li>
 
-                                    </div>
+                                            <?
+                                              }
+                                            }
+                                             ?>
+                                        </ul>
+                                      <div class="social text-right">
+                                        <ul>
+                                          <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox"></div>
+                                        </ul>
+                                      </div>
                                     </div>
                                 </div>
                             </nav>
