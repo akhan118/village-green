@@ -35,7 +35,7 @@ class MenuForm extends Model
             return true;
 
         }else{
-          echo "false";
+          
           return false;
         }
 
