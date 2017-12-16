@@ -105,11 +105,31 @@ AppAsset::register($this);
                                 <div class="collapse navbar-collapse" id="navbar-example">
                                     <div class="main-menu">
                                         <ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
                                             <li><a href=<?php echo Url::to(['site/index']) ?>><?
 if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}
 // var_dump($this->params['menu'][0]['menu_name']); //echo $this->params['menu'];?></a>
+=======
 
+                                          <?
+                                          //var_dump($this->params['menu']);
+                                          //echo  count($this->params['menu']);
+                                          if (isset($this->params['menu'])) {  ?>
+                                            <li><a href=<?php echo Url::to(['site/index']) ?>><?if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}?></a></li>
+                                            <?
+                                            for($i=1; $i < count($this->params['menu']); $i++)
+                                            {
+                                            ?>
+>>>>>>> 11c9c5e5e8407cf0b753c1fc7b5a9b29967654c8
+
+                                            <li><a class="pagess" href=<? echo Url::to(['site/page/', 'id' => $this->params['menu'][$i]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][$i]['menu_name'];}?></a>
+                                              <ul class="sub-menu sub-1">
+                                                  <li><a href="sub-services-1.html">Electrical</a></li>
+                                                  <li><a href="sub-services-2.html">Plumbing</a></li>
+                                                  <li><a href="sub-services-3.html">Paint</a></li>
+                                              </ul>
                                             </li>
+<<<<<<< HEAD
 
 
                                             <li><a href=<?php echo Url::to(['site/about']) ?>>About</a></li>
@@ -155,13 +175,19 @@ if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}
                                                 </ul>
                                             </li>
                                             <li><a href=<?php echo Url::to(['site/contact']) ?>>contact</a></li>
-                                        </ul>
-                                        <div class="social text-right">
-                                              <ul>
-                                                 <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox"></div>
-                                              </ul>
+=======
 
-                                    </div>
+                                            <?
+                                              }
+                                            }
+                                             ?>
+>>>>>>> 11c9c5e5e8407cf0b753c1fc7b5a9b29967654c8
+                                        </ul>
+                                      <div class="social text-right">
+                                        <ul>
+                                          <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox"></div>
+                                        </ul>
+                                      </div>
                                     </div>
                                 </div>
                             </nav>

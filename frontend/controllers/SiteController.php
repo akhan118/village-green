@@ -82,8 +82,8 @@ class SiteController extends Controller
           ->all();
 
       $this->menu = $rows;
-
-      Yii::$app->view->params['menu'] = $this->menu;
+      if(count($this->menu) != 0){
+      Yii::$app->view->params['menu'] = $this->menu;}
 
         return $this->render('index');
     }
