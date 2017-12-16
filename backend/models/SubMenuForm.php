@@ -40,7 +40,7 @@ var_dump($this->menu_id);
           return true;
 
       }else{
-        echo "false";
+
         return false;
       }
 
