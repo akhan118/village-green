@@ -45,7 +45,7 @@ class Submenus extends \yii\db\ActiveRecord
         return [
             'submenu_id' => 'Submenu ID',
             'submenu_name' => 'Submenu Name',
-            'menu_id' => 'Menu ID',
+            'menu_id' => 'Menu Name',
         ];
     }
 

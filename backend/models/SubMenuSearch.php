@@ -18,8 +18,8 @@ class SubMenuSearch extends Submenus
     public function rules()
     {
         return [
-            [['submenu_id', 'menu_id', 'visible_or_invisible'], 'integer'],
-            [['submenu_name', 'picture_path', 'text_field'], 'safe'],
+            [['submenu_id', 'menu_id'], 'integer'],
+            [['submenu_name'], 'safe'],
         ];
     }
 
@@ -61,12 +61,16 @@ class SubMenuSearch extends Submenus
         $query->andFilterWhere([
             'submenu_id' => $this->submenu_id,
             'menu_id' => $this->menu_id,
-            'visible_or_invisible' => $this->visible_or_invisible,
+            // 'visible_or_invisible' => $this->visible_or_invisible,
         ]);
 
-        $query->andFilterWhere(['like', 'submenu_name', $this->submenu_name])
-            ->andFilterWhere(['like', 'picture_path', $this->picture_path])
-            ->andFilterWhere(['like', 'text_field', $this->text_field]);
+        // // $query->andFilterWhere(['like', 'submenu_name', $this->submenu_name])
+        //     ->andFilterWhere(['like', 'picture_path', $this->picture_path])
+        //     ->andFilterWhere(['like', 'text_field', $this->text_field]);
+
+         $query->andFilterWhere(['like', 'submenu_name', $this->submenu_name]);
+        //     ->andFilterWhere(['like', 'picture_path', $this->picture_path])
+        //     ->andFilterWhere(['like', 'text_field', $this->text_field]);
 
         return $dataProvider;
     }
