@@ -2,6 +2,7 @@
 namespace backend\models;
 
 use yii\base\Model;
+use backend\models\Submenus;
 
 
 /**
@@ -35,7 +36,7 @@ class SubMenuForm extends Model
          public function SaveSubMenu()
     {
       if ($this->validate()) {
-          $form=new Submenu();
+          $form=new Submenus();
           $form->submenu_name = $this->submenu_name;
           $form->visible_or_invisible = $this->visible_or_invisible;
           $form->menu_id = $this->menu_id;
