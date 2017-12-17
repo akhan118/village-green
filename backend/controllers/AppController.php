@@ -16,6 +16,7 @@ use backend\models\UploadEntry;
 use backend\views\app\Submenu;
 use backend\views\app\photosView;
 use backend\models\UploadForm;
+use backend\models\Submenus;
 
 
 /**
@@ -123,10 +124,25 @@ class AppController extends Controller
         public function actionSubmenu()
         {
           $model = new SubMenuForm;
-          if($model->load(Yii::$app->request->post()) && $model->validate())
+          if($model->load(Yii::$app->request->post()))
           {
+            $request = Yii::$app->request;
 
-            $model->SaveSubMenu();
+              // var_dump($request);
+              $data=$request->post('SubMenuForm');
+           // var_dump($menuId);
+           $sumMenuName=$data['submenu_name'];
+           $MenuId=$data['menu_id'];
+
+
+          $submenuTable= new Submenus();
+          $submenuTable->submenu_name=$sumMenuName;
+          $submenuTable->menu_id=$MenuId;
+          $submenuTable->save();
+
+            $model = new SubMenuForm;
+            return $this->render('submenu', ['model'=>$model,]);
+
           }else {
           return $this->render('submenu', ['model'=>$model,]);
 

@@ -9,12 +9,10 @@ use Yii;
  *
  * @property integer $submenu_id
  * @property string $submenu_name
- * @property integer $visible_or_invisible
- * @property string $picture_path
- * @property string $text_field
  * @property integer $menu_id
  *
- * @property Menu $submenus
+ * @property Pages[] $pages
+ * @property Menu $menu
  */
 class Submenus extends \yii\db\ActiveRecord
 {
@@ -32,10 +30,10 @@ class Submenus extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            ['submenu_name',  'required'],
-            [['visible_or_invisible', 'menu_id'], 'integer'],
-            [['submenu_name', 'picture_path', 'text_field'], 'string', 'max' => 32],
-            [['submenu_id'], 'exist', 'skipOnError' => true, 'targetClass' => Menu::className(), 'targetAttribute' => ['submenu_id' => 'menu_id']],
+            [['submenu_name', 'menu_id'], 'required'],
+            [['menu_id'], 'integer'],
+            [['submenu_name'], 'string', 'max' => 32],
+            [['menu_id'], 'exist', 'skipOnError' => true, 'targetClass' => Menu::className(), 'targetAttribute' => ['menu_id' => 'menu_id']],
         ];
     }
 
@@ -47,18 +45,23 @@ class Submenus extends \yii\db\ActiveRecord
         return [
             'submenu_id' => 'Submenu ID',
             'submenu_name' => 'Submenu Name',
-            'visible_or_invisible' => 'Visible Or Invisible',
-            'picture_path' => 'Picture Path',
-            'text_field' => 'Text Field',
-            'menu_id' => 'Menu ID',
+            'menu_id' => 'Menu Name',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getSubmenu()
+    public function getPages()
     {
-        return $this->hasOne(Menu::className(), ['menu_id' => 'submenu_id']);
+        return $this->hasMany(Pages::className(), ['submenu_id' => 'submenu_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getMenu()
+    {
+        return $this->hasOne(Menu::className(), ['menu_id' => 'menu_id']);
     }
 }

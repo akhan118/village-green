@@ -33,11 +33,6 @@ $this->params['breadcrumbs'][] = $this->title;
   <br>
   <?=$form->field($model,'submenu_name') -> textInput(['maxlength'=>"True"]); ?>
 
-<?=$form->field($model,'text_field') -> textInput(['maxlength'=>"True"]); ?>
-  <?=$form->field($model,'visible_or_invisible') ->radiolist ([
-    1=>"Yes",
-    2=>"No"
-  ]); ?>
 
   <div class="form-group">
       <?= Html::submitButton('Add', ['class' => 'btn btn-primary', 'name' => 'create-button']) ?>

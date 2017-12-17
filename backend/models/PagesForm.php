@@ -41,7 +41,7 @@ class PagesForm extends Model
           return true;
 
       }else{
-        echo "false";
+        
         return false;
       }
     }
