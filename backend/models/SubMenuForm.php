@@ -20,7 +20,7 @@ class SubMenuForm extends Model
     public function rules()
     {
         return [
-            ['submenu_name', 'trim'],
+            [['submenu_name','menu_id'], 'trim'],
         ];
     }
 
@@ -29,13 +29,11 @@ class SubMenuForm extends Model
     {
       if ($this->validate()) {
           $form=new Submenus();
-var_dump($this->submenu_name);
-var_dump($this->menu_id);
 
-          $form->submenu_name = $this->submenu_name;
           $form->menu_id = $this->menu_id;
+          $form->submenu_name = $this->submenu_name;
+
           $form->save();
-          var_dump();
 
           return true;
 
