@@ -110,9 +110,9 @@ AppAsset::register($this);
                                            // var_dump($this->params['menu']);
                                           //echo  count($this->params['menu']);
                                           if (isset($this->params['menu'])) {  ?>
-                                            <li><a href=<?php echo Url::to(['site/index']) ?>><?if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}?></a></li>
+                                            <!-- <li><a href=<?php echo Url::to(['site/index']) ?>><?if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}?></a></li> -->
                                             <?
-                                            for($i=1; $i < count($this->params['menu']); $i++)
+                                            for($i=0; $i < count($this->params['menu']); $i++)
                                             {
 
                                             ?>
