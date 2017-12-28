@@ -199,10 +199,25 @@ class SiteController extends Controller
     public function actionPage()
     {
 
+      if(YII::$app->request->get())
+      {
+
+
+      //get term and search up details to be displayed
+      $term =YII::$app->request->get('menu_id');
+
+      $rows = (new \yii\db\Query())
+        ->select('*')
+        ->from('pages')
+        ->where(['like', 'menu_id', $term])
+        ->all();
+
+      //get menu items
       $menu = (new \yii\db\Query())
           ->select(['menu_name', 'menu_order','menu_id'])
           ->from('menu')
           ->all();
+      //get submenu items
 
           $subMenu = (new \yii\db\Query())
               ->select(['submenu_name', 'submenu_id','menu_id'])
@@ -230,8 +245,10 @@ class SiteController extends Controller
       Yii::$app->view->params['menu'] = $this->menu;}
 
 
-        return $this->render('department');
-
+        return $this->render('department',[
+              'results' => $rows,
+          ]);
+      }
     }
 
     /**
