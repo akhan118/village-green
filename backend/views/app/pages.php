@@ -4,6 +4,9 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use dosamigos\ckeditor\CKEditor;
 use yii\bootstrap\Modal;
+use yii\helpers\ArrayHelper;
+use backend\models\menu;
+use backend\models\submenus;
 
 $this->title = 'Pages';
 $this->params['breadcrumbs'][] = $this->title;
@@ -24,7 +27,14 @@ $this->registerJs("CKEDITOR.plugins.addExternal('imageuploader', '/village-green
       </div>
       <div class="col-md-10">
 
-        <?= $form->field($model, 'page_id') -> textInput(['maxlength'=>"True"]) ?>
+        <?= $form->field($model,'menu_id')->dropdownList(
+           ArrayHelper::map(menu::find()->all(),'menu_id', 'menu_name'),
+        ['prompt' => 'Select Menu Name']); ?>
+
+        <?= $form->field($model,'submenu_id')->dropdownList(
+           ArrayHelper::map(submenus::find()->all(),'submenu_id', 'submenu_name'),
+        ['prompt' => 'Select submenu Name']); ?>
+
         <br>
 
           <?= $form->field($model, 'page_html')->widget(CKEditor::className(), [

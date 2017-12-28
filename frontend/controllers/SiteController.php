@@ -98,7 +98,7 @@ class SiteController extends Controller
                     }
                 }
               }
-      // 
+      //
       // echo "<pre>";
       // var_dump($menu);
       // echo "</pre>";
@@ -199,16 +199,37 @@ class SiteController extends Controller
     public function actionPage()
     {
 
-      $rows = (new \yii\db\Query())
+      $menu = (new \yii\db\Query())
           ->select(['menu_name', 'menu_order','menu_id'])
           ->from('menu')
           ->all();
 
-        $request = Yii::$app->request;
-        $id = $request->get('id');
-        var_dump($id);
-        var_dump($this->menu);
-        Yii::$app->view->params['menu'] = $rows;
+          $subMenu = (new \yii\db\Query())
+              ->select(['submenu_name', 'submenu_id','menu_id'])
+              ->from('submenus')
+              ->all();
+              for ($i=0 ; $i < count($menu); $i ++)
+              {
+                $menu[$i]['submenus']=[];
+
+                for ($j=0 ; $j < count($subMenu); $j ++)
+                {
+                    if($menu[$i]['menu_id'] == $subMenu[$j]['menu_id'])
+                    {
+                      array_push($menu[$i]['submenus'],$subMenu[$j] );
+                    }
+                }
+              }
+      //
+      // echo "<pre>";
+      // var_dump($menu);
+      // echo "</pre>";
+
+      $this->menu = $menu;
+      if(count($this->menu) != 0){
+      Yii::$app->view->params['menu'] = $this->menu;}
+
+
         return $this->render('department');
 
     }
