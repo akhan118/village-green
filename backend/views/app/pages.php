@@ -15,6 +15,7 @@ $this->registerJs("CKEDITOR.plugins.addExternal('font', '/village-green/backend/
 $this->registerJs("CKEDITOR.plugins.addExternal('image2', '/village-green/backend/web/ckeditor/plugins/image2/plugin.js', '');");
 $this->registerJs("CKEDITOR.plugins.addExternal('widget', '/village-green/backend/web/ckeditor/plugins/widget/plugin.js', '');");
 $this->registerJs("CKEDITOR.plugins.addExternal('imageuploader', '/village-green/backend/web/ckeditor/plugins/imageuploader/plugin.js', '');");
+$this->registerJs("CKEDITOR.plugins.addExternal('btgrid', '/village-green/backend/web/ckeditor/plugins/btgrid/plugin.js', '');");
 
 ?>
 
@@ -39,7 +40,7 @@ $this->registerJs("CKEDITOR.plugins.addExternal('imageuploader', '/village-green
 
           <?= $form->field($model, 'page_html')->widget(CKEditor::className(), [
                        'clientOptions' => [
-                      'extraPlugins' => 'colorbutton,font,image2,widget,imageuploader',
+                      'extraPlugins' => 'btgrid,colorbutton,font,image2,widget,imageuploader,templates',
                         'toolbarGroups' => [
                             ['name' => 'undo'],
                             ['name' => 'colors'],
@@ -48,10 +49,11 @@ $this->registerJs("CKEDITOR.plugins.addExternal('imageuploader', '/village-green
                             ['name' => 'document', 'groups' => ['mode', ]],
                             ['name' => 'paragraph', 'groups' => ['list','blocks']], // <--- OUR NEW PLUGIN YAY!
                             ['name' => 'styles'], // <--- OUR NEW PLUGIN YAY!
+                            ['name' => 'btgrid'], // <--- OUR NEW PLUGIN YAY!
 
                         ]
                     ],
-                       'preset' => 'custom'
+                       'preset' => 'full'
                    ]) ?>
               <br>
               <br>
