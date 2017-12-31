@@ -205,12 +205,24 @@ class SiteController extends Controller
 
       //get term and search up details to be displayed
       $term =YII::$app->request->get('menu_id');
+      $term2 =YII::$app->request->get('submenu_id');
 
-      $rows = (new \yii\db\Query())
-        ->select('*')
-        ->from('pages')
-        ->where(['like', 'menu_id', $term])
-        ->all();
+      if ( isset($term2) ){
+
+        $rows = (new \yii\db\Query())
+          ->select('*')
+          ->from('pages')
+          ->where(['like', 'menu_id', $term])
+          ->andWhere(['like', 'submenu_id', $term2])
+          ->all();
+
+     } else {
+       $rows = (new \yii\db\Query())
+         ->select('*')
+         ->from('pages')
+         ->where(['like', 'menu_id', $term])
+         ->all();
+     }
 
       //get menu items
       $menu = (new \yii\db\Query())
