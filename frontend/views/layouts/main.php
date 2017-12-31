@@ -124,7 +124,7 @@ AppAsset::register($this);
 
                                                 for($k=0; $k < count($this->params['menu'][$i]['submenus']); $k++)
                                                 {
-                                                  echo '<li><a href="sub-services-1.html">'.$this->params['menu'][$i]['submenus'][$k]['submenu_name'].'</a></li>';
+                                                  echo '<li><a href='.Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id'], 'submenu_id' => $this->params['menu'][$i]['submenus'][$k]['submenu_id']]).'>'.$this->params['menu'][$i]['submenus'][$k]['submenu_name'].'</a></li>';
 
                                                 }
                                                 ?>
