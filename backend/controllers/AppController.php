@@ -17,6 +17,10 @@ use backend\views\app\Submenu;
 use backend\views\app\photosView;
 use backend\models\UploadForm;
 use backend\models\Submenus;
+use backend\views\app\menus;
+use yii\helpers\Json;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Url;
 
 
 /**
@@ -180,6 +184,34 @@ class AppController extends Controller
     }
 
 
+    public function actionSubcat() {
+        $out = [];
+        if (isset($_POST['depdrop_parents'])) {
+            $parents = $_POST['depdrop_parents'];
+            if ($parents != null) {
+                $cat_id = $parents[0];
+
+              $temp =submenus::find()->where(['menu_id' => $cat_id])->asArray()->all();
+              $out = array();
+              $i = 0;
+              foreach ($temp as $value) {
+                  $out[$i]['id'] = $value['submenu_id'];
+                  $out[$i]['name'] = $value['submenu_name'];
+                  $i++;
+              }
+                //self::getSubCatList($cat_id);
+                // the getSubCatList function will query the database based on the
+                // cat_id and return an array like below:
+                // [
+                //    ['id'=>'<sub-cat-id-1>', 'name'=>'<sub-cat-name1>'],
+                //    ['id'=>'<sub-cat_id_2>', 'name'=>'<sub-cat-name2>']
+                // ]
+                echo Json::encode(['output'=>$out, 'selected'=>'']);
+                return ;
+            }
+        }
+        echo Json::encode(['output'=>'', 'selected'=>'']);
+    }
 
     //     $model = new UploadForm();
     //
