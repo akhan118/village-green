@@ -7,6 +7,8 @@ use yii\bootstrap\Modal;
 use yii\helpers\ArrayHelper;
 use backend\models\menu;
 use backend\models\submenus;
+use kartik\depdrop\DepDrop;
+use yii\helpers\Url;
 
 $this->title = 'Pages';
 $this->params['breadcrumbs'][] = $this->title;
@@ -18,7 +20,6 @@ $this->registerJs("CKEDITOR.plugins.addExternal('imageuploader', '/village-green
 $this->registerJs("CKEDITOR.plugins.addExternal('btgrid', '/village-green/backend/web/ckeditor/plugins/btgrid/plugin.js', '');");
 
 ?>
-
 
   <?php $form = ActiveForm::begin(); ?>
 
@@ -32,9 +33,16 @@ $this->registerJs("CKEDITOR.plugins.addExternal('btgrid', '/village-green/backen
            ArrayHelper::map(menu::find()->all(),'menu_id', 'menu_name'),
         ['prompt' => 'Select Menu Name']); ?>
 
-        <?= $form->field($model,'submenu_id')->dropdownList(
-           ArrayHelper::map(submenus::find()->all(),'submenu_id', 'submenu_name'),
-        ['prompt' => 'Select submenu Name']); ?>
+        <? $tempVar = ArrayHelper::map(menu::find()->all(),'menu_id', 'menu_name');
+         var_dump($tempVar); ?>
+
+        <?= $form->field($model,'submenu_id')->widget(DepDrop::classname(), [
+            'pluginOptions'=>[
+                'depends'=>[Html::getInputId($model, 'menu_id')],
+                'placeholder'=>'Select Submenu',
+                'url'=>Url::to(['/app/subcat'])
+            ]
+        ]);?>
 
         <br>
 

@@ -19,6 +19,8 @@ class PagesForm extends Model
         return [
             ['page_html','required'],
             ['menu_id','required'],
+            ['submenu_id','trim'],
+
         ];
     }
 
@@ -34,7 +36,9 @@ class PagesForm extends Model
           $form->page_html = $this->page_html;
           $form->save();
 
-          var_dump("True SavePage");
+          var_dump("True Save Page");
+          var_dump($this);
+
           return true;
 
       }else{
