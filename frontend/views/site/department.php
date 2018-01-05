@@ -36,6 +36,7 @@ use yii\helpers\Html;
                         <div class="page-head-left">
 
                             <div class="single-page-head">
+                              <p>&nbsp;</p>
                                 <div class="left-contact">
                                     <h4 class="sec-head">Contact Information</h4>
                                     <div class="left-cont-info">
