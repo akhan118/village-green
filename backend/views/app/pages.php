@@ -34,7 +34,7 @@ $this->registerJs("CKEDITOR.plugins.addExternal('btgrid', '/village-green/backen
         ['prompt' => 'Select Menu Name']); ?>
 
         <? $tempVar = ArrayHelper::map(menu::find()->all(),'menu_id', 'menu_name');
-         var_dump($tempVar); ?>
+          ?>
 
         <?= $form->field($model,'submenu_id')->widget(DepDrop::classname(), [
             'pluginOptions'=>[

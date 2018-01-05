@@ -75,8 +75,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                         "url" => "#",
                                         "items" => [
                                             ["label" => "Edit Menu", "url" => ["menu/index"]],
-                                            ["label" => "Edit Submenu", "url" => ["submenu/index"]]
-
+                                            ["label" => "Edit Submenu", "url" => ["submenu/index"]],
+                                            ["label" => "Edit Pages", "url" => ["pages/index"]]
 
                                     ],
                                     ],
