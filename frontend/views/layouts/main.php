@@ -119,12 +119,9 @@ AppAsset::register($this);
 
                                             ?>
 
-<<<<<<< HEAD
 
-                                            <li><a class="pagess" href=<? echo Url::to(['site/page/', 'id' => $this->params['menu'][$i]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][$i]['menu_name'];}?></a>
-=======
                                             <li><a class="pagess" href=<? echo Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][$i]['menu_name'];}?></a>
->>>>>>> c299b88d1bba0d08bfbcdc5896997edd409ba89e
+
                                               <ul class="sub-menu sub-1">
 
                                                 <?
