@@ -12,13 +12,12 @@ use yii\helpers\Url;
 
 $this->title = 'Pages';
 $this->params['breadcrumbs'][] = $this->title;
-$this->registerJs("CKEDITOR.plugins.addExternal('colorbutton', '/village-green/backend/web/ckeditor/plugins/colorbutton/plugin.js', '');");
-$this->registerJs("CKEDITOR.plugins.addExternal('font', '/village-green/backend/web/ckeditor/plugins/font/plugin.js', '');");
-$this->registerJs("CKEDITOR.plugins.addExternal('image2', '/village-green/backend/web/ckeditor/plugins/image2/plugin.js', '');");
-$this->registerJs("CKEDITOR.plugins.addExternal('widget', '/village-green/backend/web/ckeditor/plugins/widget/plugin.js', '');");
-$this->registerJs("CKEDITOR.plugins.addExternal('imageuploader', '/village-green/backend/web/ckeditor/plugins/imageuploader/plugin.js', '');");
-$this->registerJs("CKEDITOR.plugins.addExternal('btgrid', '/village-green/backend/web/ckeditor/plugins/btgrid/plugin.js', '');");
-
+$this->registerJs("CKEDITOR.plugins.addExternal('colorbutton', '".Url::base()."/ckeditor/plugins/colorbutton/plugin.js', '');");
+$this->registerJs("CKEDITOR.plugins.addExternal('font', '".Url::base()."/ckeditor/plugins/font/plugin.js', '');");
+$this->registerJs("CKEDITOR.plugins.addExternal('image2', '".Url::base()."/ckeditor/plugins/image2/plugin.js', '');");
+$this->registerJs("CKEDITOR.plugins.addExternal('widget', '".Url::base()."/ckeditor/plugins/widget/plugin.js', '');");
+$this->registerJs("CKEDITOR.plugins.addExternal('imageuploader', '".Url::base()."/ckeditor/plugins/imageuploader/plugin.js', '');");
+$this->registerJs("CKEDITOR.plugins.addExternal('btgrid', '".Url::base()."/ckeditor/plugins/btgrid/plugin.js', '');");
 ?>
 
   <?php $form = ActiveForm::begin(); ?>
