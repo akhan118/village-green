@@ -12,6 +12,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use backend\models\Menu;
 
 /**
  * Site controller
@@ -76,12 +77,34 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-      $rows = (new \yii\db\Query())
+      $menu = (new \yii\db\Query())
           ->select(['menu_name', 'menu_order','menu_id'])
           ->from('menu')
           ->all();
 
-      $this->menu = $rows;
+          $subMenu = (new \yii\db\Query())
+              ->select(['submenu_name', 'submenu_id','menu_id'])
+              ->from('submenus')
+              ->all();
+              for ($i=0 ; $i < count($menu); $i ++)
+              {
+                $menu[$i]['submenus']=[];
+
+                for ($j=0 ; $j < count($subMenu); $j ++)
+                {
+                    if($menu[$i]['menu_id'] == $subMenu[$j]['menu_id'])
+                    {
+                      array_push($menu[$i]['submenus'],$subMenu[$j] );
+                    }
+                }
+              }
+      //
+      // echo "<pre>";
+      // var_dump($menu);
+      // echo "</pre>";
+
+
+      $this->menu = $menu;
       if(count($this->menu) != 0){
       Yii::$app->view->params['menu'] = $this->menu;}
 
@@ -206,18 +229,68 @@ class SiteController extends Controller
     public function actionPage()
     {
 
-      $rows = (new \yii\db\Query())
+      if(YII::$app->request->get())
+      {
+
+
+      //get term and search up details to be displayed
+      $term =YII::$app->request->get('menu_id');
+      $term2 =YII::$app->request->get('submenu_id');
+
+      if ( isset($term2) ){
+
+        $rows = (new \yii\db\Query())
+          ->select('*')
+          ->from('pages')
+          ->where(['like', 'menu_id', $term])
+          ->andWhere(['like', 'submenu_id', $term2])
+          ->all();
+
+     } else {
+       $rows = (new \yii\db\Query())
+         ->select('*')
+         ->from('pages')
+         ->where(['like', 'menu_id', $term])
+         ->all();
+     }
+
+      //get menu items
+      $menu = (new \yii\db\Query())
           ->select(['menu_name', 'menu_order','menu_id'])
           ->from('menu')
           ->all();
+      //get submenu items
 
-        $request = Yii::$app->request;
-        $id = $request->get('id');
-        var_dump($id);
-        var_dump($this->menu);
-        Yii::$app->view->params['menu'] = $rows;
-        return $this->render('department');
+          $subMenu = (new \yii\db\Query())
+              ->select(['submenu_name', 'submenu_id','menu_id'])
+              ->from('submenus')
+              ->all();
+              for ($i=0 ; $i < count($menu); $i ++)
+              {
+                $menu[$i]['submenus']=[];
 
+                for ($j=0 ; $j < count($subMenu); $j ++)
+                {
+                    if($menu[$i]['menu_id'] == $subMenu[$j]['menu_id'])
+                    {
+                      array_push($menu[$i]['submenus'],$subMenu[$j] );
+                    }
+                }
+              }
+      //
+      // echo "<pre>";
+      // var_dump($menu);
+      // echo "</pre>";
+
+      $this->menu = $menu;
+      if(count($this->menu) != 0){
+      Yii::$app->view->params['menu'] = $this->menu;}
+
+
+        return $this->render('department',[
+              'results' => $rows,
+          ]);
+      }
     }
 
     /**

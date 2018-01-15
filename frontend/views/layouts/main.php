@@ -109,21 +109,35 @@ AppAsset::register($this);
 
                                            
                                           <?
-                                          //var_dump($this->params['menu']);
+                                           // var_dump($this->params['menu']);
                                           //echo  count($this->params['menu']);
                                           if (isset($this->params['menu'])) {  ?>
-                                            <li><a href=<?php echo Url::to(['site/index']) ?>><?if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}?></a></li>
+                                            <!-- <li><a href=<?php echo Url::to(['site/index']) ?>><?if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}?></a></li> -->
                                             <?
-                                            for($i=1; $i < count($this->params['menu']); $i++)
+                                            for($i=0; $i < count($this->params['menu']); $i++)
                                             {
+
                                             ?>
 
+<<<<<<< HEAD
 
                                             <li><a class="pagess" href=<? echo Url::to(['site/page/', 'id' => $this->params['menu'][$i]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][$i]['menu_name'];}?></a>
+=======
+                                            <li><a class="pagess" href=<? echo Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][$i]['menu_name'];}?></a>
+>>>>>>> c299b88d1bba0d08bfbcdc5896997edd409ba89e
                                               <ul class="sub-menu sub-1">
-                                                  <li><a href="sub-services-1.html">Electrical</a></li>
-                                                  <li><a href="sub-services-2.html">Plumbing</a></li>
-                                                  <li><a href="sub-services-3.html">Paint</a></li>
+
+                                                <?
+
+                                                for($k=0; $k < count($this->params['menu'][$i]['submenus']); $k++)
+                                                {
+                                                  echo '<li><a href='.Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id'], 'submenu_id' => $this->params['menu'][$i]['submenus'][$k]['submenu_id']]).'>'.$this->params['menu'][$i]['submenus'][$k]['submenu_name'].'</a></li>';
+
+                                                }
+                                                ?>
+                                                  <!-- <li><a href="sub-services-1.html">Electrical</a></li> -->
+                                                  <!-- <li><a href="sub-services-2.html">Plumbing</a></li>
+                                                  <li><a href="sub-services-3.html">Paint</a></li> -->
                                               </ul>
                                             </li>
 
