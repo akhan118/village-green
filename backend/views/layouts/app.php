@@ -6,6 +6,7 @@
  */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $bundle = yiister\gentelella\assets\Asset::register($this);
 
@@ -184,7 +185,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                 <li>
                                     <a href="javascript:;">Help</a>
                                 </li>
-                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                <li><a href="<? echo Url::to(['site/logout']);?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                                 </li>
                             </ul>
                         </li>
