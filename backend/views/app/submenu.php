@@ -5,7 +5,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use backend\models\menu;
+use backend\models\Menu;
 use backend\models\submenu;
 
 
