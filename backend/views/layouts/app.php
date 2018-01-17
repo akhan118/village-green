@@ -6,6 +6,7 @@
  */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $bundle = yiister\gentelella\assets\Asset::register($this);
 
