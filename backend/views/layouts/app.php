@@ -49,7 +49,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
-                        <h2>Sunny House</h2>
+                        <? echo '<h2>' . Yii::$app->user->identity->username . '</h2>' ?>
+
                     </div>
                 </div>
                 <!-- /menu prile quick info -->
@@ -170,23 +171,21 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="http://placehold.it/128x128" alt="">Admin
-                                <span class=" fa fa-angle-down"></span>
+                            <?  echo  '<img src="http://placehold.it/128x128" alt="">(' . Yii::$app->user->identity->username . ')
+                                <span class=" fa fa-angle-down"></span>'
+                                ?>
                             </a>
-                            <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="javascript:;">  Profile</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <span class="badge bg-red pull-right">50%</span>
-                                        <span>Settings</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">Help</a>
-                                </li>
-                                <li><a href="<? echo Url::to(['site/logout']);?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
-                                </li>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right"">
+                              <?
+                              echo   '<li>'
+                              . Html::beginForm(['/site/logout'], 'post')
+                              . Html::submitButton(
+                                  'Logout ',
+                                  ['class' => 'btn btn-block']
+                              )
+                              . Html::endForm()
+                              .'</li>';
+                            ?>
                             </ul>
                         </li>
 
