@@ -5,8 +5,8 @@ use yii\bootstrap\ActiveForm;
 use dosamigos\ckeditor\CKEditor;
 use yii\bootstrap\Modal;
 use yii\helpers\ArrayHelper;
-use backend\models\menu;
-use backend\models\submenus;
+use backend\models\Menu;
+use backend\models\Submenus;
 use kartik\depdrop\DepDrop;
 use yii\helpers\Url;
 
