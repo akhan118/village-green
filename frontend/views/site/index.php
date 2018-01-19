@@ -38,7 +38,7 @@ $this->title = 'My Yii Application';
 <div class="col-md-4 col-sm-4 col-xs-12 photoshop">
 <div class="single-awesome-project">
 <div class="awesome-img">
-<a class="venobox" data-gall="myGallery" href="img/portfolio/default/1.jpg">
+<a>
     <img src="img/portfolio/default/1.jpeg" alt="" />
     <div class="add-actions text-center">
         <div class="project-dec">
@@ -54,7 +54,7 @@ $this->title = 'My Yii Application';
 <!-- single-awesome-project start -->
 <div class="single-awesome-project">
 <div class="awesome-img">
-<a class="venobox" data-gall="myGallery" href="img/portfolio/default/2.jpg">
+<a>
     <img src="img/portfolio/default/2.jpeg" alt="" />
     <div class="add-actions text-center">
         <div class="project-dec">
@@ -71,7 +71,7 @@ $this->title = 'My Yii Application';
 <!-- single-awesome-project start -->
 <div class="single-awesome-project">
 <div class="awesome-img">
-<a class="venobox" data-gall="myGallery" href="img/portfolio/default/3.jpg">
+<a>
     <img src="img/portfolio/default/3.jpeg" alt="" />
     <div class="add-actions text-center">
         <div class="project-dec">
@@ -88,7 +88,7 @@ $this->title = 'My Yii Application';
 <!-- single-awesome-project start -->
 <div class="single-awesome-project">
 <div class="awesome-img">
-<a class="venobox" data-gall="myGallery" href="img/portfolio/default/4.jpg">
+<a>
     <img src="img/portfolio/default/4.jpeg" alt="" />
     <div class="add-actions text-center">
         <div class="project-dec">
@@ -104,7 +104,7 @@ $this->title = 'My Yii Application';
 <!-- single-awesome-project start -->
 <div class="single-awesome-project">
 <div class="awesome-img">
-<a class="venobox" data-gall="myGallery" href="img/portfolio/default/5.jpg">
+<a>
     <img src="img/portfolio/default/5.jpeg" alt="" />
     <div class="add-actions text-center">
         <div class="project-dec">
@@ -120,7 +120,7 @@ $this->title = 'My Yii Application';
 <!-- single-awesome-project start -->
 <div class="single-awesome-project">
 <div class="awesome-img">
-<a class="venobox" data-gall="myGallery" href="img/portfolio/default/6.jpg">
+<a>
     <img src="img/portfolio/default/6.jpeg" alt="" />
     <div class="add-actions text-center">
         <div class="project-dec">

@@ -65,7 +65,7 @@ AppAsset::register($this);
                         </div>
                         <!-- logo end -->
                         <div class="col-md-9 col-sm-9">
-                          
+                            
                        <!-- mainmenu start -->
                             <nav class="navbar navbar-default">
                                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -81,22 +81,25 @@ AppAsset::register($this);
                                         <ul class="nav navbar-nav navbar-right">
 
                                           <?
-                                           // var_dump($this->params['menu']);
+                                           /// var_dump($this->params['menu']);
                                           //echo  count($this->params['menu']);
                                           if (isset($this->params['menu'])) {  ?>
                                             <!-- <li><a href=<?php echo Url::to(['site/index']) ?>><?if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}?></a></li> -->
                                             <?
                                             for($i=0; $i < count($this->params['menu']); $i++)
                                             {
+
                                             ?>
 
                                             <li><a class="pagess" href=<? echo Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][$i]['menu_name'];}?></a>
                                               <ul class="sub-menu sub-1">
 
                                                 <?
+
                                                 for($k=0; $k < count($this->params['menu'][$i]['submenus']); $k++)
                                                 {
                                                   echo '<li><a href='.Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id'], 'submenu_id' => $this->params['menu'][$i]['submenus'][$k]['submenu_id']]).'>'.$this->params['menu'][$i]['submenus'][$k]['submenu_name'].'</a></li>';
+
                                                 }
                                                 ?>
                                                   <!-- <li><a href="sub-services-1.html">Electrical</a></li> -->
@@ -123,6 +126,9 @@ AppAsset::register($this);
                     <!-- mainmenu end -->
                 </div>
             </div>
+            
+                </div>
+            </div>
             <!-- header-area end -->
             <!-- mobile-menu-area start -->
             <div class="mobile-menu-area hidden-lg hidden-md hidden-sm">
@@ -130,72 +136,50 @@ AppAsset::register($this);
                     <div class="row">
                         <div class="col-md-12">
                             <div class="mobile-menu">
-                                <div class="logo">
-                                    <a href="index.html"><img src="img/logo/SunLogo.png" alt="" /></a>
+                                <div class="logo"
+                                     href="index.html"><img src="img/logo/SunLogo3.png" alt="" />
                                 </div>
                                 <nav id="dropdown">
                                     <ul>
-                                        <li><a href="index.html">Home</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="index.html">Home 01</a></li>
-                                                <li><a href="index-2.html">Home 02</a></li>
-                                                <li><a href="index-3.html">Home 03</a></li>
-                                                <li><a href="index-4.html">Home 04</a></li>
-                                                <li><a href="index-5.html">Home 05</a></li>
-                                                <li><a href="index-6.html">Home 06</a></li>
-                                                <li><a href="index-7.html">Home 07</a></li>
-                                                <li><a href="index-8.html">Home 08</a></li>
-                                                <li><a href="index-9.html">Home 09</a></li>
-                                                <li><a href="index-10.html">Home 10</a></li>
-                                            </ul>
+                                      <?
+                                      if (isset($this->params['menu'])) {  ?>
+                                        <!-- <li><a href=<?php echo Url::to(['site/index']) ?>><?if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}?></a></li> -->
+                                        <?
+                                        for($i=0; $i < count($this->params['menu']); $i++)
+                                        {
+
+                                        ?>
+
+                                        <li><a  href=<? echo Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][$i]['menu_name'];}?></a>
+                                          <ul class="sub-menu">
+
+                                            <?
+
+                                            for($k=0; $k < count($this->params['menu'][$i]['submenus']); $k++)
+                                            {
+                                              echo '<li><a href='.Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id'], 'submenu_id' => $this->params['menu'][$i]['submenus'][$k]['submenu_id']]).'>'.$this->params['menu'][$i]['submenus'][$k]['submenu_name'].'</a></li>';
+
+                                            }
+                                            ?>
+                                              <!-- <li><a href="sub-services-1.html">Electrical</a></li> -->
+                                              <!-- <li><a href="sub-services-2.html">Plumbing</a></li>
+                                              <li><a href="sub-services-3.html">Paint</a></li> -->
+                                          </ul>
                                         </li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="services.html">Services</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="sub-services-1.html">Business Managment</a></li>
-                                                <li><a href="sub-services-2.html">Business Planning</a></li>
-                                                <li><a href="sub-services-3.html">Online Support</a></li>
-                                                <li><a href="sub-services-4.html">Online Marketing</a></li>
-                                                <li><a href="sub-services-5.html">Financial Support</a></li>
-                                                <li><a href="sub-services-6.html">Succesful Business</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="portfolio.html">Portfolio</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="portfolio-1.html">Portfolio 2 column</a></li>
-                                                <li><a href="portfolio-2.html">Portfolio 3 column</a></li>
-                                                <li><a href="portfolio-3.html">Portfolio 4 column</a></li>
-                                                <li><a href="portfolio-4.html">Portfolio fullwidth </a></li>
-                                                <li><a href="project-1.html"> Single project one</a></li>
-                                                <li><a href="project-2.html"> Single project two</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="blog-grid.html">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog-grid.html">Blog grid</a></li>
-                                                <li><a href="blog-grid-2.html">Blog 3 column</a></li>
-                                                <li><a href="blog-single.html">Blog Sidebar</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">contacts</a></li>
+
+                                        <?
+                                          }
+                                        }
+                                         ?>
+                                        
                                     </ul>
                                 </nav>
-                                <div class="footer-social text-right">
-                                              <ul>
-                                                 <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_share_toolbox"></div>
-                                              </ul>
-
-                                    </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- mobile-menu-area end -->
-                    <!-- mainmenu end -->
-                </div>
-            </div>
         </header>
 
     <div class="container">
@@ -206,7 +190,6 @@ AppAsset::register($this);
         <?= $content ?>
     </div>
 </div>
-
 
 <div class="footer-area footer-second">
    <div class="container">
