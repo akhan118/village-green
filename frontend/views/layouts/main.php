@@ -58,41 +58,14 @@ AppAsset::register($this);
                         <div class="col-md-3 col-sm-3">
                             <div class="logo">
                                 <!-- Brand -->
-                                <a class="navbar-brand page-scroll sticky-logo" href="#">
+                                <a class="navbar-brand page-scroll sticky-logo" href= <?php echo Url::to(['site/index']) ?>>
                                     <img src="img/logo/SunLogo.png" alt="">
                                 </a>
                             </div>
                         </div>
                         <!-- logo end -->
                         <div class="col-md-9 col-sm-9">
-                            <!-- Search Button start -->
-                          <!--   <a href="#" class="search-btn" title="Quick view" data-toggle="modal" data-target="#searchModal">
-                                <i class="fa fa-search"></i>
-                            </a> -->
-                            <div class="modal fade" id="searchModal" tabindex="-1" role="dialog">
-                                <div class="modal-dialog" role="document">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <img class="search-logo" src="img/logo/logo.png" alt="search-logo">
-                                    <form action="#" class="form-inline">
-                                        <input type="text" name="search" placeholder="Search here...">
-                                        <button><i class="fa fa-search"></i></button>
-                                    </form>
-                                    <div class="quick_search">
-                                        <h5 class="search-head">Quick search</h5>
-                                        <ul>
-                                            <li><a href="#">website</a></li>
-                                            <li><a href="#">photoshop</a></li>
-                                            <li><a href="#">social marketing</a></li>
-                                            <li><a href="#">business</a></li>
-                                            <li><a href="#">agency</a></li>
-                                            <li><a href="#">portfolio</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Search Button end -->
-                            <!-- mainmenu start -->
-                       <!-- mainmenu start -->
+                         
                             <nav class="navbar navbar-default">
                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                 <div class="menu-toggle">
@@ -110,7 +83,7 @@ AppAsset::register($this);
                                            // var_dump($this->params['menu']);
                                           //echo  count($this->params['menu']);
                                           if (isset($this->params['menu'])) {  ?>
-                                            <!-- <li><a href=<?php echo Url::to(['site/index']) ?>><?if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}?></a></li> -->
+                                            <li><a href=<?php echo Url::to(['site/index']) ?>><?if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}?></a></li> -->
                                             <?
                                             for($i=0; $i < count($this->params['menu']); $i++)
                                             {
