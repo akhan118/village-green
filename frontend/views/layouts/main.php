@@ -58,14 +58,40 @@ AppAsset::register($this);
                         <div class="col-md-3 col-sm-3">
                             <div class="logo">
                                 <!-- Brand -->
-                                <div class="navbar-brand page-scroll sticky-logo" href="index.html">
+                                <a class="navbar-brand page-scroll sticky-logo" href="#">
                                     <img src="img/logo/SunLogo.png" alt="">
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <!-- logo end -->
                         <div class="col-md-9 col-sm-9">
-                            
+                            <!-- Search Button start -->
+                          <!--   <a href="#" class="search-btn" title="Quick view" data-toggle="modal" data-target="#searchModal">
+                                <i class="fa fa-search"></i>
+                            </a> -->
+                            <div class="modal fade" id="searchModal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <img class="search-logo" src="img/logo/logo.png" alt="search-logo">
+                                    <form action="#" class="form-inline">
+                                        <input type="text" name="search" placeholder="Search here...">
+                                        <button><i class="fa fa-search"></i></button>
+                                    </form>
+                                    <div class="quick_search">
+                                        <h5 class="search-head">Quick search</h5>
+                                        <ul>
+                                            <li><a href="#">website</a></li>
+                                            <li><a href="#">photoshop</a></li>
+                                            <li><a href="#">social marketing</a></li>
+                                            <li><a href="#">business</a></li>
+                                            <li><a href="#">agency</a></li>
+                                            <li><a href="#">portfolio</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Search Button end -->
+                            <!-- mainmenu start -->
                        <!-- mainmenu start -->
                             <nav class="navbar navbar-default">
                                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -81,25 +107,22 @@ AppAsset::register($this);
                                         <ul class="nav navbar-nav navbar-right">
 
                                           <?
-                                           /// var_dump($this->params['menu']);
+                                           // var_dump($this->params['menu']);
                                           //echo  count($this->params['menu']);
                                           if (isset($this->params['menu'])) {  ?>
                                             <!-- <li><a href=<?php echo Url::to(['site/index']) ?>><?if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}?></a></li> -->
                                             <?
                                             for($i=0; $i < count($this->params['menu']); $i++)
                                             {
-
                                             ?>
 
                                             <li><a class="pagess" href=<? echo Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][$i]['menu_name'];}?></a>
                                               <ul class="sub-menu sub-1">
 
                                                 <?
-
                                                 for($k=0; $k < count($this->params['menu'][$i]['submenus']); $k++)
                                                 {
                                                   echo '<li><a href='.Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id'], 'submenu_id' => $this->params['menu'][$i]['submenus'][$k]['submenu_id']]).'>'.$this->params['menu'][$i]['submenus'][$k]['submenu_name'].'</a></li>';
-
                                                 }
                                                 ?>
                                                   <!-- <li><a href="sub-services-1.html">Electrical</a></li> -->
@@ -126,54 +149,46 @@ AppAsset::register($this);
                     <!-- mainmenu end -->
                 </div>
             </div>
-            
-                </div>
-            </div>
-            <!-- header-area end -->
+
             <!-- mobile-menu-area start -->
             <div class="mobile-menu-area hidden-lg hidden-md hidden-sm">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="mobile-menu">
-                                <div class="logo"
-                                     href="index.html"><img src="img/logo/SunLogo3.png" alt="" />
+                                <div class="logo">
+                                    <a href="index.html"><img src="img/logo/SunLogo3.png" alt="" /></a>
                                 </div>
                                 <nav id="dropdown">
                                     <ul>
-                                      <?
-                                      if (isset($this->params['menu'])) {  ?>
-                                        <!-- <li><a href=<?php echo Url::to(['site/index']) ?>><?if(isset($this->params['menu'])){echo $this->params['menu'][0]['menu_name'];}?></a></li> -->
+
+                                      <?  if (isset($this->params['menu'])) {
+                                        //a place holder for home but removed
+                                        ?>
                                         <?
                                         for($i=0; $i < count($this->params['menu']); $i++)
                                         {
+                                          ?>
 
-                                        ?>
+                                          <li><a href=<? echo Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][$i]['menu_name'];}?></a>
+                                            <ul class="sub-menu">
 
-                                        <li><a  href=<? echo Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id']]); ?>> <? if(isset($this->params['menu'])){echo $this->params['menu'][$i]['menu_name'];}?></a>
-                                          <ul class="sub-menu">
+                                              <?
+                                              for($k=0; $k < count($this->params['menu'][$i]['submenus']); $k++)
+                                              {
+                                                echo '<li><a href='.Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id'], 'submenu_id' => $this->params['menu'][$i]['submenus'][$k]['submenu_id']]).'>'.$this->params['menu'][$i]['submenus'][$k]['submenu_name'].'</a></li>';
+                                              }
+                                              ?>
 
-                                            <?
-
-                                            for($k=0; $k < count($this->params['menu'][$i]['submenus']); $k++)
-                                            {
-                                              echo '<li><a href='.Url::to(['site/page/', 'menu_id' => $this->params['menu'][$i]['menu_id'], 'submenu_id' => $this->params['menu'][$i]['submenus'][$k]['submenu_id']]).'>'.$this->params['menu'][$i]['submenus'][$k]['submenu_name'].'</a></li>';
-
-                                            }
-                                            ?>
-                                              <!-- <li><a href="sub-services-1.html">Electrical</a></li> -->
-                                              <!-- <li><a href="sub-services-2.html">Plumbing</a></li>
-                                              <li><a href="sub-services-3.html">Paint</a></li> -->
-                                          </ul>
-                                        </li>
-
-                                        <?
-                                          }
+                                            </ul>
+                                          </li>
+                                          <?
                                         }
-                                         ?>
-                                        
+                                      }
+                                      ?>
+
                                     </ul>
-                                </nav>
+                                  </nav>
                             </div>
                         </div>
                     </div>
@@ -190,6 +205,14 @@ AppAsset::register($this);
         <?= $content ?>
     </div>
 </div>
+
+<!-- <footer class="footer">
+    <div class="container">
+        <p class="pull-left">&copy; Coding Crash Course </p>
+        <p class="pull-right"></p>
+    </div>
+</footer> -->
+
 
 <div class="footer-area footer-second">
    <div class="container">
