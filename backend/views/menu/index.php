@@ -15,21 +15,22 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <!-- <p> -->
-        <!-- <?= Html::a('Create Menu', ['create'], ['class' => 'btn btn-success']) ?> -->
-    <!-- </p> -->
-<?php Pjax::begin(); ?>    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
+    <!-- <p>
+        <?= Html::a('Create Menu', ['create'], ['class' => 'btn btn-success']) ?>
+    </p> -->
+    <?= GridView::widget([
+      'dataProvider' => $dataProvider,
+      'filterModel' => $searchModel,
+      'columns' => [
+        ['class' => 'yii\grid\SerialColumn'],
 
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+        'menu_id',
+        'menu_name',
+        'menu_submenu_true',
+        'menu_order',
 
-            'menu_id',
-            'menu_name',
-            'menu_submenu_true',
-            'menu_order',
-
-            ['class' => yii\grid\ActionColumn::className(),'template'=>'{view} {update}'],
-        ],
+        ['class' => 'yii\grid\ActionColumn'],
+      ],
     ]); ?>
-<?php Pjax::end(); ?></div>
+
+</div>

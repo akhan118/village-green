@@ -38,7 +38,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
             <div class="left_col scroll-view">
 
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>Sunny House Hardware</span></a>
+                    <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>Sunny House and Hardware</span></a>
                 </div>
                 <div class="clearfix"></div>
 
@@ -59,19 +59,22 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
 
                 <!-- sidebar menu -->
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-
+<br>
                     <div class="menu_section">
-                        <h3>General</h3>
+                      <br>
+                      <br>
+                        <!-- <h3>General</h3> -->
                         <?=
                         \yiister\gentelella\widgets\Menu::widget(
                             [
                                 "items" => [
+
                                     ["label" => "Home", "url" => "/", "icon" => "home"],
                                     ["label" => "Menus", "url" => ["app/menu"], "icon" => "files-o"],
                                     ["label" => "Submenu", "url" => ["app/submenu"], "icon" => "files-o"],
                                     ["label" => "Pages", "url" => ["app/pages"], "icon" => "files-o"],
-                                    ["label" => "Photos", "url" => ["app/photo"], "icon" => "files-o"],
-                                    [
+                                     // ["label" => "Photos", "url" => ["app/photo"], "icon" => "files-o"],
+                                     [
                                         "label" => "Edit View",
                                         "icon" => "th",
                                         "url" => "#",

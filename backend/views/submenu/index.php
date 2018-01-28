@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <!-- </p> -->
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-
+        'filterModel' => $searchModel,     // SThis puts the row for searching
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 

@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                <br>
 
                     <br>
-                  
+
 
                <?= $form->field($model,'menu_submenu_true') ->radiolist ([
                   1=>"Yes",
@@ -67,5 +67,5 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 <?php ActiveForm::end() ?>
-    <code><?= __FILE__ ?></code>
+    <!-- <code><?= __FILE__ ?></code> -->
 </div>
