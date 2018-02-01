@@ -15,7 +15,7 @@ use backend\models\SubMenuForm;
 use backend\models\UploadEntry;
 use backend\views\app\Submenu;
 use backend\views\app\photosView;
-use backend\models\UploadForm;
+use backend\models\uploadform;
 use backend\models\Submenus;
 use backend\views\app\menus;
 use yii\helpers\Json;
@@ -130,15 +130,15 @@ class AppController extends Controller
           $model = new SubMenuForm;
           if($model->load(Yii::$app->request->post()) && $model->validate())
           {
-            $model->SaveSubMenu();
-             $model = new SubMenuForm;
-            return $this->render('submenu', ['model'=>$model,]);
 
+            $model->SaveSubMenu();
+            $model = new SubMenuForm;
+            return $this->render('submenu', ['model'=>$model,]);
 
           }else {
           return $this->render('submenu', ['model'=>$model,]);
 
-}
+          }
         }
 
         /**
@@ -155,6 +155,8 @@ class AppController extends Controller
             //var_dump($model);
             //echo "True SaveMenu";
             $model->SavePages();
+            $model = new pagesForm;
+            return $this->render('pages', ['model'=>$model,]);
 
           }else {
 
