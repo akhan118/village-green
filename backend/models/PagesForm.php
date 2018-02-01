@@ -36,8 +36,8 @@ class PagesForm extends Model
           $form->page_html = $this->page_html;
           $form->save();
 
-          var_dump("True Save Page");
-          var_dump($this);
+          //var_dump("True Save Page");
+          //var_dump($this);
 
           return true;
 
