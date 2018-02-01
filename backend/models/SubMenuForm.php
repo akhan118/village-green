@@ -34,7 +34,7 @@ class SubMenuForm extends Model
           $form->submenu_name = $this->submenu_name;
 
           $form->save();
-          var_dump($form->save());
+          // var_dump($form->save());
           return true;
 
       }else{

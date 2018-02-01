@@ -33,21 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                <br>
 
                     <br>
-                    <?= $form->field($model,'menu_order')->dropdownList([
-                      1 => 'Position 1',
-                      2 => 'Position 2',
-                      3 => 'Position 3',
-                      4 => 'Position 4',
-                      5 => 'Position 5',
-                      6 => 'Position 6',
-                      7 => 'Position 7',
-                      8 => 'Position 8',
-                      9 => 'Position 9'
-                     ],
-                     ['prompt' => "Select Menu Order"]
-                     ); ?>
 
-                    <br>
 
                <?= $form->field($model,'menu_submenu_true') ->radiolist ([
                   1=>"Yes",
@@ -70,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
                     </div>
-                  
+
                 </div>
 
 
@@ -81,5 +67,5 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 <?php ActiveForm::end() ?>
-    <code><?= __FILE__ ?></code>
+    <!-- <code><?= __FILE__ ?></code> -->
 </div>
