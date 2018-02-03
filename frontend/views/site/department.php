@@ -46,14 +46,7 @@ use yii\helpers\Html;
                                             <li><a href="#"><i class="fa fa-phone"></i> + (1800) - 354 - 586</a></li>
                                         </ul>
                                     </div>
-                                    <div class="left-side-icons">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        </ul>
-                                    </div>
+                                   
                                 </div>
                             </div>
 
