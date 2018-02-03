@@ -21,7 +21,7 @@ use yii\helpers\Html;
 									<div class="col-md-12 col-sm-12 col-xs-12">
 											<div class="single-page">
 													<div class="page-img elec-page">
-															<img src="img/services/ser1.jpg" alt="">
+															<img src="img/services/headerphoto2.jpg" alt="">
 													</div>
 											</div>
 									</div>
