@@ -232,10 +232,9 @@ class SiteController extends Controller
       if(YII::$app->request->get())
       {
 
-
       //get term and search up details to be displayed
-      $term =YII::$app->request->get('menu_id');
-      $term2 =YII::$app->request->get('submenu_id');
+      $term = YII::$app->request->get('menu_id');
+      $term2 = YII::$app->request->get('submenu_id');
 
       if ( isset($term2) ){
 
@@ -251,6 +250,7 @@ class SiteController extends Controller
          ->select('*')
          ->from('pages')
          ->where(['like', 'menu_id', $term])
+         ->andWhere(['submenu_id' => null])
          ->all();
      }
 
