@@ -83,7 +83,7 @@ AppAsset::register($this);
                                            // var_dump($this->params['menu']);
                                           //echo  count($this->params['menu']);
                                           if (isset($this->params['menu'])) {  ?>
-                                            <li><a href=<?php echo Url::to(['site/index']) ?>>Home</a></li> -->
+                                            <li><a href=<?php echo Url::to(['site/index']) ?>>Home</a></li> 
                                             <?
                                             for($i=0; $i < count($this->params['menu']); $i++)
                                             {

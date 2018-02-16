@@ -21,7 +21,7 @@ use yii\helpers\Html;
 									<div class="col-md-12 col-sm-12 col-xs-12">
 											<div class="single-page">
 													<div class="page-img elec-page">
-															<img src="img/services/ser1.jpg" alt="">
+															<img src="img/services/headerphoto2.jpg" alt="">
 													</div>
 											</div>
 									</div>
@@ -46,14 +46,7 @@ use yii\helpers\Html;
                                             <li><a href="#"><i class="fa fa-phone"></i> + (1800) - 354 - 586</a></li>
                                         </ul>
                                     </div>
-                                    <div class="left-side-icons">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        </ul>
-                                    </div>
+                                   
                                 </div>
                             </div>
 
@@ -124,17 +117,7 @@ use yii\helpers\Html;
 		   <div class="container">
 			   <div class="row">
 				  <div class="col-md-12 col-sm-12">
-                      <div class="footer-top">
-                          <div class="footer-social text-center">
-                              <ul>
-                                  <li><a href="#">Facebook</a></li>
-                                  <li><a href="#">Twitter</a></li>
-                                  <li><a href="#">Youtube</a></li>
-                                  <li><a href="#">Instragram</a></li>
-                              </ul>
-                          </div>
-                      </div>
-			            <div class="footer-bottom">
+                           <div class="footer-bottom">
                             <div class="copyright text-center">
                                 <p>Copyright © 2016 <a href="#"> usdtheme</a>. All Rights Reserved</p>
                             </div>
