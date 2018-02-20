@@ -16,7 +16,7 @@ class MenuForm extends Model
         return [
             ['menu_name', 'required'],
             ['menu_submenu_true', 'required'],
-            ['menu_order', 'required'],
+            // ['menu_order', 'required'],
 
 
         ];
@@ -28,14 +28,14 @@ class MenuForm extends Model
             $form=new Menu();
             $form->menu_name = $this->menu_name;
             $form->menu_submenu_true = $this->menu_submenu_true;
-            $form->menu_order = $this->menu_order;
+            $form->menu_order = 1;
             $form->save();
 
-            var_dump("True SaveMenu");
+            // var_dump("True SaveMenu");
             return true;
 
         }else{
-          echo "false";
+
           return false;
         }
 
@@ -49,7 +49,7 @@ class MenuForm extends Model
       return [
           'menu_name' => 'Enter Menu Name',
           'menu_submenu_true' => 'Do you have a  Submenu?',
-          'menu_order' => 'Select Menu Order',
+          // 'menu_order' => 'Select Menu Order',
       ];
   }
 }

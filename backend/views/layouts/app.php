@@ -6,6 +6,7 @@
  */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $bundle = yiister\gentelella\assets\Asset::register($this);
 
@@ -37,7 +38,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
             <div class="left_col scroll-view">
 
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>Sunny House Hardware</span></a>
+                    <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>Sunny House and Hardware</span></a>
                 </div>
                 <div class="clearfix"></div>
 
@@ -48,7 +49,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
-                        <h2>Sunny House</h2>
+                        <? echo '<h2>' . Yii::$app->user->identity->username . '</h2>' ?>
+
                     </div>
                 </div>
                 <!-- /menu prile quick info -->
@@ -57,76 +59,81 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
 
                 <!-- sidebar menu -->
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-
+<br>
                     <div class="menu_section">
-                        <h3>General</h3>
+                      <br>
+                      <br>
+                        <!-- <h3>General</h3> -->
                         <?=
                         \yiister\gentelella\widgets\Menu::widget(
                             [
                                 "items" => [
+
                                     ["label" => "Home", "url" => "/", "icon" => "home"],
                                     ["label" => "Menus", "url" => ["app/menu"], "icon" => "files-o"],
                                     ["label" => "Submenu", "url" => ["app/submenu"], "icon" => "files-o"],
                                     ["label" => "Pages", "url" => ["app/pages"], "icon" => "files-o"],
-                                    ["label" => "Photos", "url" => ["app/photo"], "icon" => "files-o"],
-                                    [
-                                        "label" => "Widgets",
+                                     // ["label" => "Photos", "url" => ["app/photo"], "icon" => "files-o"],
+                                     [
+                                        "label" => "Edit View",
                                         "icon" => "th",
                                         "url" => "#",
                                         "items" => [
-                                            ["label" => "Menu", "url" => ["site/menu"]],
-                                            ["label" => "Panel", "url" => ["site/panel"]],
-                                        ],
+                                            ["label" => "Edit Menu", "url" => ["menu/index"]],
+                                            ["label" => "Edit Submenu", "url" => ["submenu/index"]],
+                                            ["label" => "Edit Pages", "url" => ["pages/index"]]
+
                                     ],
-                                    [
-                                        "label" => "Badges",
-                                        "url" => "#",
-                                        "icon" => "table",
-                                        "items" => [
-                                            [
-                                                "label" => "Default",
-                                                "url" => "#",
-                                                "badge" => "123",
-                                            ],
-                                            [
-                                                "label" => "Success",
-                                                "url" => "#",
-                                                "badge" => "new",
-                                                "badgeOptions" => ["class" => "label-success"],
-                                            ],
-                                            [
-                                                "label" => "Danger",
-                                                "url" => "#",
-                                                "badge" => "!",
-                                                "badgeOptions" => ["class" => "label-danger"],
-                                            ],
-                                        ],
                                     ],
-                                    [
-                                        "label" => "Multilevel",
-                                        "url" => "#",
-                                        "icon" => "table",
-                                        "items" => [
-                                            [
-                                                "label" => "Second level 1",
-                                                "url" => "#",
-                                            ],
-                                            [
-                                                "label" => "Second level 2",
-                                                "url" => "#",
-                                                "items" => [
-                                                    [
-                                                        "label" => "Third level 1",
-                                                        "url" => "#",
-                                                    ],
-                                                    [
-                                                        "label" => "Third level 2",
-                                                        "url" => "#",
-                                                    ],
-                                                ],
-                                            ],
-                                        ],
-                                    ],
+                                    // [
+                                    //     "label" => "Badges",
+                                    //     "url" => "#",
+                                    //     "icon" => "table",
+                                    //     "items" => [
+                                    //         [
+                                    //             "label" => "Default",
+                                    //             "url" => "#",
+                                    //             "badge" => "123",
+                                    //         ],
+                                    //         [
+                                    //             "label" => "Success",
+                                    //             "url" => "#",
+                                    //             "badge" => "new",
+                                    //             "badgeOptions" => ["class" => "label-success"],
+                                    //         ],
+                                    //         [
+                                    //             "label" => "Danger",
+                                    //             "url" => "#",
+                                    //             "badge" => "!",
+                                    //             "badgeOptions" => ["class" => "label-danger"],
+                                    //         ],
+                                    //     ],
+                                    // ],
+                                    // [
+                                    //     "label" => "Multilevel",
+                                    //     "url" => "#",
+                                    //     "icon" => "table",
+                                    //     "items" => [
+                                    //         [
+                                    //             "label" => "Second level 1",
+                                    //             "url" => "#",
+                                    //         ],
+                                    //         [
+                                    //             "label" => "Second level 2",
+                                    //             "url" => "#",
+                                    //             "items" => [
+                                    //                 [
+                                    //                     "label" => "Third level 1",
+                                    //                     "url" => "#",
+                                    //                 ],
+                                    //                 [
+                                    //                     "label" => "Third level 2",
+                                    //                     "url" => "#",
+                                    //                 ],
+                                    //             ],
+                                    //         ],
+                                    //     ],
+                                    // ],
                                 ],
                             ]
                         )
@@ -167,27 +174,25 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="http://placehold.it/128x128" alt="">John Doe
-                                <span class=" fa fa-angle-down"></span>
+                            <?  echo  '<img src="http://placehold.it/128x128" alt="">(' . Yii::$app->user->identity->username . ')
+                                <span class=" fa fa-angle-down"></span>'
+                                ?>
                             </a>
-                            <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="javascript:;">  Profile</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <span class="badge bg-red pull-right">50%</span>
-                                        <span>Settings</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">Help</a>
-                                </li>
-                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
-                                </li>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right"">
+                              <?
+                              echo   '<li>'
+                              . Html::beginForm(['/site/logout'], 'post')
+                              . Html::submitButton(
+                                  'Logout ',
+                                  ['class' => 'btn btn-block']
+                              )
+                              . Html::endForm()
+                              .'</li>';
+                            ?>
                             </ul>
                         </li>
 
-                        <li role="presentation" class="dropdown">
+                        <!-- <li role="presentation" class="dropdown">
                             <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-envelope-o"></i>
                                 <span class="badge bg-green">6</span>
@@ -258,7 +263,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     </div>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
 
                     </ul>
                 </nav>
@@ -294,7 +299,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
         <!-- footer content -->
         <footer>
             <div class="pull-right">
-                Code Crash Course <br />
+                Coding Crash Course <br />
                <!--target="_blank">Yiister</a>  -->
             </div>
             <div class="clearfix"></div>

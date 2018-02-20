@@ -12,6 +12,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use backend\models\Menu;
 
 /**
  * Site controller
@@ -21,6 +22,9 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
+
+     public $menu;
+
     public function behaviors()
     {
         return [
@@ -72,6 +76,38 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
+      $menu = (new \yii\db\Query())
+          ->select(['menu_name', 'menu_order','menu_id'])
+          ->from('menu')
+          ->all();
+
+          $subMenu = (new \yii\db\Query())
+              ->select(['submenu_name', 'submenu_id','menu_id'])
+              ->from('submenus')
+              ->all();
+              for ($i=0 ; $i < count($menu); $i ++)
+              {
+                $menu[$i]['submenus']=[];
+
+                for ($j=0 ; $j < count($subMenu); $j ++)
+                {
+                    if($menu[$i]['menu_id'] == $subMenu[$j]['menu_id'])
+                    {
+                      array_push($menu[$i]['submenus'],$subMenu[$j] );
+                    }
+                }
+              }
+      //
+      // echo "<pre>";
+      // var_dump($menu);
+      // echo "</pre>";
+
+
+      $this->menu = $menu;
+      if(count($this->menu) != 0){
+      Yii::$app->view->params['menu'] = $this->menu;}
+
         return $this->render('index');
     }
     /**
@@ -149,7 +185,116 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
+   // /**
+   //   * Displays about page.
+   //   *
+   //   * @return mixed
+   //   */
+   //  public function actionHardware()
+   //  {
+   //      return $this->render('hardware');
+   //  }
+
+   //   /**
+   //   * Displays about page.
+   //   *
+   //   * @return mixed
+   //   */
+   //  public function actionHouseandgifts()
+   //  {
+   //      return $this->render('houseandgifts');
+   //  }
+
+   //   /**
+   //   * Displays about page.
+   //   *
+   //   * @return mixed
+   //   */
+   //  public function actionLawnandgarden()
+   //  {
+   //      return $this->render('lawnandgarden');
+   //  }
+
+   //   /**
+   //   * Displays about page.
+
+   //   * @return mixed
+   //   */
+   //  public function actionSpecialtyitems()
+   //  {
+   //      return $this->render('specialtyitems');
+   //  }
+
+
+    public function actionPage()
+    {
+
+      if(YII::$app->request->get())
+      {
+
+      //get term and search up details to be displayed
+      $term = YII::$app->request->get('menu_id');
+      $term2 = YII::$app->request->get('submenu_id');
+
+      if ( isset($term2) ){
+
+        $rows = (new \yii\db\Query())
+          ->select('*')
+          ->from('pages')
+          ->where(['like', 'menu_id', $term])
+          ->andWhere(['like', 'submenu_id', $term2])
+          ->all();
+
+     } else {
+       $rows = (new \yii\db\Query())
+         ->select('*')
+         ->from('pages')
+         ->where(['like', 'menu_id', $term])
+         ->andWhere(['submenu_id' => null])
+         ->all();
+     }
+
+      //get menu items
+      $menu = (new \yii\db\Query())
+          ->select(['menu_name', 'menu_order','menu_id'])
+          ->from('menu')
+          ->all();
+      //get submenu items
+
+          $subMenu = (new \yii\db\Query())
+              ->select(['submenu_name', 'submenu_id','menu_id'])
+              ->from('submenus')
+              ->all();
+              for ($i=0 ; $i < count($menu); $i ++)
+              {
+                $menu[$i]['submenus']=[];
+
+                for ($j=0 ; $j < count($subMenu); $j ++)
+                {
+                    if($menu[$i]['menu_id'] == $subMenu[$j]['menu_id'])
+                    {
+                      array_push($menu[$i]['submenus'],$subMenu[$j] );
+                    }
+                }
+              }
+      //
+      // echo "<pre>";
+      // var_dump($menu);
+      // echo "</pre>";
+
+      $this->menu = $menu;
+      if(count($this->menu) != 0){
+      Yii::$app->view->params['menu'] = $this->menu;}
+
+
+        return $this->render('department',[
+              'results' => $rows,
+          ]);
+      }
+    }
+
     /**
+
      * Signs user up.
      *
      * @return mixed

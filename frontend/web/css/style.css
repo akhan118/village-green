@@ -134,7 +134,7 @@ margin: 0;
 padding: 0;
 }
 .area-padding {
-  padding: 80px 0;
+  padding: 0;
 }
 .blog-padding {
     padding: 80px 0 20px;
@@ -506,9 +506,9 @@ form.form-inline {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.intro-content {
-    padding: 180px 0;
-}
+/*.intro-content {
+    padding: 10px;
+}*/
 .title1 {
     font-weight: 700;
     text-transform: capitalize;
@@ -557,7 +557,7 @@ form.form-inline {
 /*  6.Portfolio Area
 /*--------------------------------*/
 .portfolio-area {
-  background: #f8f8f8 none repeat scroll 0 0;
+  background: none repeat scroll 0 0;
 }
 .portfolio-menu li a {
     color: #666;
@@ -605,7 +605,7 @@ form.form-inline {
   margin-bottom: 30px;
 }
 .awesome-img > a::after {
-  background: rgba(0, 0, 0, 0.85) none repeat scroll 0 0;
+  background: #dd5810 none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;
@@ -1286,7 +1286,7 @@ span.email-notes{color: #42414f;
 }
 .intro-area-2 .slide-content {
     left: 0;
-    margin: -30px auto 0;
+    margin: auto 0;
     position: absolute;
     right: 0;
     text-align: center;
@@ -1626,7 +1626,7 @@ span.email-notes{color: #42414f;
 .testimonial-carousel.owl-carousel.owl-theme .owl-controls .owl-dots div.owl-dot.active span {
     background: #333 none repeat scroll 0 0;
     left: 0;
-    width: 20px;
+    width: 1000px;
     border-radius: 10px;
 }
 .testi-text > h6 {

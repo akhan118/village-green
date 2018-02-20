@@ -8,20 +8,18 @@ use app\models\Pages;
  */
 class PagesForm extends Model
 {
-    public $page_id;
     public $page_html;
-    public $uploads;
-
+    public $menu_id;
+    public $submenu_id;
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            ['page_id','required'],
             ['page_html','required'],
-            [['uploads'], 'file', 'skipOnEmpty' => false,
-                 'extensions' => 'png, jpg', 'maxFiles' => 4],
+            ['menu_id','required'],
+            ['submenu_id','trim'],
 
         ];
     }
@@ -33,15 +31,18 @@ class PagesForm extends Model
     {
       if ($this->validate()) {
           $form=new Pages();
-          $form->page_id = $this->page_id;
+          $form->menu_id = $this->menu_id;
+          $form->submenu_id = $this->submenu_id;
           $form->page_html = $this->page_html;
           $form->save();
 
-          var_dump("True SavePage");
+          //var_dump("True Save Page");
+          //var_dump($this);
+
           return true;
 
       }else{
-        echo "false";
+
         return false;
       }
     }

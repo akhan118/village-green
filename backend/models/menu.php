@@ -30,7 +30,7 @@ class Menu extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['menu_name', 'menu_submenu_true', 'menu_order'], 'required'],
+            [['menu_name', 'menu_submenu_true'], 'required'],
             [['menu_submenu_true', 'menu_order'], 'integer'],
             [['menu_name'], 'string', 'max' => 32],
         ];
@@ -45,7 +45,7 @@ class Menu extends \yii\db\ActiveRecord
             'menu_id' => 'Menu ID',
             'menu_name' => 'Menu Name',
             'menu_submenu_true' => 'Menu Submenu True',
-            'menu_order' => 'Menu Order',
+            // 'menu_order' => 'Menu Order',
         ];
     }
 

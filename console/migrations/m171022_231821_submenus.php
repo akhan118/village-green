@@ -16,9 +16,9 @@ class m171022_231821_submenus extends Migration
           'submenu_id' => $this->primaryKey(),
           'submenu_name' => $this->string(32)->notNull(),
           'menu_id' => $this->integer()->notNull(),
-          'visible_or_invisible' => $this->smallInteger()->notNull(),
-          'picture_path' => $this->string(32),
-          'text_field' => $this->string(32)->notNull(),
+          // 'visible_or_invisible' => $this->smallInteger()->notNull(),
+          // 'picture_path' => $this->string(32),
+          // 'text_field' => $this->string(32)->notNull(),
       ], $tableOptions);
 
       // add foreign key for table `menu`
