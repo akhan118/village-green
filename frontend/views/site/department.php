@@ -119,7 +119,7 @@ use yii\helpers\Html;
 				  <div class="col-md-12 col-sm-12">
                            <div class="footer-bottom">
                             <div class="copyright text-center">
-                                <p>Copyright © 2016 <a href="#"> usdtheme</a>. All Rights Reserved</p>
+                                <p>Copyright © 2018 <a href="https://www.meetup.com/Coding-Crash-Course/"> Coding Crash Course</a>. All Rights Reserved</p>
                             </div>
                         </div>
 				   </div>
