@@ -74,6 +74,8 @@ html, body {
 a:focus {
 	outline:0px solid;
 }
+
+
 img {max-width:100%;
 	height:auto;
 }

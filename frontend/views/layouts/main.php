@@ -59,9 +59,8 @@ AppAsset::register($this);
                             <div class="logo">
                                 <!-- Brand -->
                                 <a class="navbar-brand page-scroll sticky-logo" href= <?php echo Url::to(['site/index']) ?>>
-                                    <img src="img/logo/SunLogo.png" alt="">
-                                </a>
-                            </div>
+                                    <img src="img/logo/SunnyHouseHardware.png" alt="">
+                                </a>                             </div>
                         </div>
                         <!-- logo end -->
                         <div class="col-md-9 col-sm-9">
