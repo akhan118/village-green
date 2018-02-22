@@ -46,7 +46,7 @@ use yii\helpers\Html;
                                             <li><a href="#"><i class="fa fa-phone"></i> + (1800) - 354 - 586</a></li>
                                         </ul>
                                     </div>
-                                   
+
                                 </div>
                             </div>
 
@@ -118,9 +118,9 @@ use yii\helpers\Html;
 			   <div class="row">
 				  <div class="col-md-12 col-sm-12">
                            <div class="footer-bottom">
-                            <div class="copyright text-center">
+                            <!-- <div class="copyright text-center">
                                 <p>Copyright © 2018 <a href="https://www.meetup.com/Coding-Crash-Course/"> Coding Crash Course</a>. All Rights Reserved</p>
-                            </div>
+                            </div> -->
                         </div>
 				   </div>
 			   </div>
