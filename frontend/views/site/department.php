@@ -113,19 +113,19 @@ use yii\helpers\Html;
         </div>
         <!-- End page Area -->
 		<!-- Start Footer bottom Area -->
-		<div class="footer-area">
+		<!-- <div class="footer-area">
 		   <div class="container">
 			   <div class="row">
 				  <div class="col-md-12 col-sm-12">
                            <div class="footer-bottom">
-                            <!-- <div class="copyright text-center">
+                            <div class="copyright text-center">
                                 <p>Copyright © 2018 <a href="https://www.meetup.com/Coding-Crash-Course/"> Coding Crash Course</a>. All Rights Reserved</p>
-                            </div> -->
+                            </div>
                         </div>
 				   </div>
 			   </div>
 		   </div>
-		</div>
+		</div> -->
 
 
 </div>
