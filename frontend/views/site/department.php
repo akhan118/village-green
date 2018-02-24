@@ -41,9 +41,9 @@ use yii\helpers\Html;
                                     <h4 class="sec-head">Contact Information</h4>
                                     <div class="left-cont-info">
                                         <ul>
-                                            <li><a href="#"><i class="fa fa-map-marker"></i>76, Building- Avenue-16, London</a></li>
-                                            <li><a href="#"><i class="fa fa-envelope"></i>info@royalsteel.com</a></li>
-                                            <li><a href="#"><i class="fa fa-phone"></i> + (1800) - 354 - 586</a></li>
+                                            <li><a href="#"><i class="fa fa-map-marker"></i>18165 Mack Ave., Detroit Michigan 48224</a></li>
+                                            <li><a href="#"><i class="fa fa-envelope"></i>info@SunnyHouseAndHardware.com</a></li>
+                                            <li><a href="#"><i class="fa fa-phone"></i> 313.882.9230</a></li>
                                         </ul>
                                     </div>
                                    
