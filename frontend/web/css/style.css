@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Agent minimal portfolio template 
+    Template Name: Agent minimal portfolio template
     Template URI: http://usdtheme.com
     Description: This is html5 template
     Author: usdtheme
@@ -9,10 +9,10 @@
 
 -----------------------------------------------------------------------------------*/
 
-/*-----------------------------------------------------------------------------------  
+/*-----------------------------------------------------------------------------------
      CSS INDEX
     ===================
-	
+
     1. Theme Default CSS (body, link color, section etc)
 	2. Header Area
 	3.Mobile Menu Area
@@ -32,12 +32,12 @@
     14.About css
         14.1. Fun fact css
         14.2. Testimonials css
-        14.3. Subscribe css 
+        14.3. Subscribe css
         14.5. Team Area css
         14.5. Pricing Area
     15.Services page css
     16.Sub Services page css
-    
+
 -----------------------------------------------------------------------------------*/
 
 /* Google Fonts Here */
@@ -194,7 +194,7 @@ body {
     padding: 0.2em 0;
 }
 /*----------------------------------------*/
-/*  2. Header Area 
+/*  2. Header Area
 /*----------------------------------------*/
 .logo {
   display: block;
@@ -1142,7 +1142,7 @@ span.email-notes{color: #42414f;
     padding: 30px 0;
 }
 .copyright  a {
-  color: #000;
+  /* color: #000; */
 }
 .copyright  p{
     margin-bottom: 0;
@@ -1379,7 +1379,7 @@ span.email-notes{color: #42414f;
 .video-area {
     background: #f1f1f1 none repeat scroll 0 0;
 }
-/*--------------------------------*/ 
+/*--------------------------------*/
 /*  14.1 Fun Fact Area
 /*--------------------------------*/
 .fun-fact-area {
@@ -2037,7 +2037,7 @@ span.email-notes{color: #42414f;
 }
 .left-menu ul li a:hover {
     color: #fff;
-    background: #333; 
+    background: #333;
 }
 .left-menu ul li a {
     background: #eee none repeat scroll 0 0;
